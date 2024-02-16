@@ -7,7 +7,7 @@ addons.setConfig({
 
     // Logo
     brandTitle: 'Deeshak',
-    brandUrl: 'https://github.com/deeshak/client',
+    brandUrl: 'https://deeshak.com',
     brandTarget: '_blank',
   }),
 });

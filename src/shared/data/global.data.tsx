@@ -24,7 +24,7 @@ export const headerData: HeaderProps = {
   actions: [
     {
       text: 'GitHub',
-      href: 'https://github.com/deeshak/client',
+      href: 'https://github.com/radioDeeshak/client',
       targetBlank: true,
     },
   ],
