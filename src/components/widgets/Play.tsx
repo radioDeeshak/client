@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { IconPlayerPlay, IconPlayerPause } from '@tabler/icons-react';
+import { IconPlayerPlayFilled, IconPlayerPauseFilled } from '@tabler/icons-react';
 
 const Play = () => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -39,11 +39,11 @@ const Play = () => {
 
     return (
         <div className="fixed bottom-12 right-4 z-50">
-            <button onClick={handlePlayPause} className="btn btn-primary m-1 py-2 px-5 text-sm font-semibold shadow-none md:px-6" style={{ marginBottom: '10px' }}>
+            <button onClick={handlePlayPause} className="btn btn-primary m-1 h-20 w-20 flex items-center justify-center rounded-full" style={{ marginBottom: '10px' }}>
                 {isPlaying ? (
-                    <IconPlayerPause size={24} color="white" />
+                    <IconPlayerPauseFilled size={32} color="white" />
                 ) : (
-                    <IconPlayerPlay size={24} color="white" />
+                    <IconPlayerPlayFilled size={32} color="white" />
                 )}
             </button>
         </div>
