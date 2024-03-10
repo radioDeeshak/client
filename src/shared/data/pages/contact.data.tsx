@@ -6,8 +6,8 @@ export const contactHero: HeroProps = {
   title: 'Get in touch with us',
   subtitle: (
     <>
-      <span className="hidden md:inline">{`Thank you for your interest in `}</span>
-      {`Dishak. We're here to help and answer any question you might have. We look forward to hearing from you.
+      <span className="hidden md:inline">{`شكرًا لاهتمامك بـ .`}</span>
+      {`راديو ديشاك. نحن هنا لمساعدتك والإجابة على أي سؤال قد يكون لديك. نتطلع إلى الاستماع منك.
       `}
     </>
   ),
@@ -20,8 +20,8 @@ export const contactContent: ContactProps = {
     title: 'Contact us',
     subtitle: (
       <>
-        Please take a moment to fill out this form.{' '}
-        <span className="hidden md:inline">{`So we can better understand your needs and get the process started smoothly.`}</span>
+        يرجى أخذ لحظة لملء هذا النموذج.{' '}
+        <span className="hidden md:inline">{`حتى نتمكن من فهم احتياجاتك بشكل أفضل وبدء العملية بسلاسة.`}</span>
       </>
     ),
   },

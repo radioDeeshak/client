@@ -19,7 +19,7 @@ export const genresContent: GenreProps = {
   hasBackground: false,
   columns: 3,
   header: {
-    title: 'تيارات ديشاك',
+    title: 'Our Genres',
     subtitle:
       'نهدف لتقديم محتوى متنوع ومتعدد الأصوات يعكس تنوع وتعدد الثقافات والمجتمعات السودانية في الداخل والخارج. يعتمد الراديو على مشاركة المستمعين في تقديم المحتوى والبرامج والمواضيع التي يهتمون بها ويودون تقديمها',
     tagline: 'culture',

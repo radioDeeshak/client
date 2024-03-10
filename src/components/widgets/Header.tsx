@@ -128,7 +128,7 @@ const Header = () => {
           } fixed bottom-0 left-0 w-full justify-end p-3 md:static md:mb-0 md:flex md:w-auto md:self-center md:p-0`}
         >
           <div className="flex w-full items-center justify-between md:w-auto">
-            {showToggleTheme && <ToggleDarkMode />}
+            {showToggleTheme /* && <ToggleDarkMode /> */}
             <div className="justify-end bottom-0 right-0 m-3">
               <Play />
             </div>
