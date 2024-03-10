@@ -17,7 +17,7 @@ const GenresContent = ({
     hasBackground={hasBackground}
     containerClass={`max-w-6xl ${isBeforeContent ? 'md:pb-8 lg:pb-12' : ''} ${
       isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''
-    }`}
+    } bg-slate-50`}
   >
     {header && <Headline header={header} titleClass="text-4xl md:text-5xl" />}
     <ItemGrid

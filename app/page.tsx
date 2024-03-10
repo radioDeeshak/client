@@ -16,8 +16,8 @@ export default function Page() {
     <>
       <Hero {...homeHero} />
       <Genres {...homeGenres} />
-      <Content {...homeContentOne} />
-      <Content {...homeContentTwo} />
+      {/* <Content {...homeContentOne} /> */}
+      {/* <Content {...homeContentTwo} /> */}
     </>
   );
 }
