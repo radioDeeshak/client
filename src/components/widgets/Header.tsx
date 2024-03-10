@@ -9,6 +9,7 @@ import ToggleMenu from '../atoms/ToggleMenu';
 import { headerData } from '~/shared/data/global.data';
 import CTA from '../common/CTA';
 import { CallToActionType } from '~/shared/types';
+import Play from '~/components/widgets/Play';
 
 const Header = () => {
   const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
@@ -71,7 +72,7 @@ const Header = () => {
           </div>
         </div>
         <nav
-          className={`${isToggleMenuOpen ? 'block' : 'hidden'} h-screen md:w-full ${
+          className={`${isToggleMenuOpen ? 'block' : 'hidden'} h-screen md:w-full justify-center ${
             position === 'right' ? 'justify-end' : position === 'left' ? 'justify-start' : 'justify-center'
           } w-auto overflow-y-auto dark:text-slate-200 md:mx-5 md:flex md:h-auto md:items-center md:overflow-visible`}
           aria-label="Main navigation"
@@ -128,15 +129,9 @@ const Header = () => {
         >
           <div className="flex w-full items-center justify-between md:w-auto">
             {showToggleTheme && <ToggleDarkMode />}
-            {showRssFeed && (
-              <Link
-                className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-                aria-label="RSS Feed"
-                href=""
-              >
-                <IconRss className="h-5 w-5" />
-              </Link>
-            )}
+            <div className="justify-end bottom-0 right-0 m-3">
+              <Play />
+            </div>
             {actions && actions.length > 0 && (
               <div className="ml-4 flex w-max flex-wrap justify-end">
                 {actions.map((callToAction, index) => (

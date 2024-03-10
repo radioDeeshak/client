@@ -40,6 +40,13 @@ type CallToActionType = {
   targetBlank?: boolean;
 };
 
+type Play = {
+  callToAction: CallToActionType;
+  containerClass?: string;
+  audioSrc: string;
+  audioType: string;
+};
+
 type LinkOrButton = {
   callToAction?: CallToActionType;
   containerClass?: string;
@@ -232,8 +239,7 @@ type WindowSize = {
   height: number;
 };
 
-// WIDGETS
-type HeroProps = {
+type HeroProps = Widget &  {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
   tagline?: string;
@@ -264,12 +270,17 @@ type CallToActionProps = Widget & {
   items?: Array<Item>;
 };
 
+type PlayProps = {
+  callToAction: CallToActionType;
+  containerClass?: string;
+  audioSrc: string;
+  audioType: string;
+};
+
 type GenreProps = Widget & {
   header?: Header;
   items?: Array<Item>;
-  /** How many columns should it have? */
   columns?: 1 | 2 | 3;
-  /** Do you want the image to be displayed? */
   isImageDisplayed?: boolean;
   image?: Image;
   isBeforeContent?: boolean;
@@ -288,10 +299,8 @@ type ContentProps = Widget & {
 type StepsProps = Widget & {
   header?: Header;
   items: Array<Item>;
-  /** Do you want the image to be displayed? */
   isImageDisplayed?: boolean;
   image?: Image;
-  /** Do you want to reverse the widget? */
   isReversed?: boolean;
 };
 
@@ -332,7 +341,6 @@ type FooterProps = {
 type HeaderProps = {
   links?: Array<MenuLink>;
   actions?: Array<CallToActionType>;
-  // actions?: Array<ActionLink>;
   isSticky?: boolean;
   showToggleTheme?: boolean;
   showRssFeed?: boolean;

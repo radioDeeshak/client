@@ -6,11 +6,11 @@ import Providers from '~/components/atoms/Providers';
 import Header from '~/components/widgets/Header';
 import Footer from '~/components/widgets/Footer';
 
-import { Inter as CustomFont } from 'next/font/google';
+import { Noto_Naskh_Arabic as CustomFont } from 'next/font/google';
 import '~/assets/styles/base.css';
 
-const customFont = CustomFont({ subsets: ['latin'], variable: '--font-custom' });
-
+// add arabic font subset
+const customFont = CustomFont({ subsets: ['latin', 'arabic'], variable: '--font-custom' });
 export interface LayoutProps {
   children: React.ReactNode;
 }

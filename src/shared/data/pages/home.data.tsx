@@ -4,28 +4,20 @@ import {
   IconRectangularPrism,
   IconDeviceAudioTape,
   IconBriefcase,
+  IconFlame,
 } from '@tabler/icons-react';
-import {
-  ContentProps,
-  GenreProps,
-  HeroProps,
-  } from '../../types';
+import { ContentProps, GenreProps, HeroProps } from '../../types';
 
 import heroImg from '~/assets/images/hero.jpg';
 
 export const homeHero: HeroProps = {
-  title: (
-    <>
-      مجموعة راديو ديشاك
-    </>
-  ),
+  title: <>مجموعة راديو ديشاك</>,
   subtitle: (
     <>
       <span className="hidden md:inline">
-        <span className="font-semibold underline decoration-primary-600 decoration-wavy decoration-1 underline-offset-2">
-        </span>{' '}
-        راديو المهاجر والمغترب السوداني      
-        </span>{' '}
+        <span className="font-semibold underline decoration-primary-600 decoration-wavy decoration-1 underline-offset-2"></span>{' '}
+        راديو المهاجر والمغترب السوداني
+      </span>{' '}
     </>
   ),
   image: {
@@ -41,31 +33,19 @@ export const homeGenres: GenreProps = {
   header: {
     title: (
       <>
-        <span className="whitespace-nowrap">اجمل الاغنيات السودانية</span>
+        <span className="whitespace-nowrap">أجمل الأغنيات السودانية</span>
       </>
     ),
-    subtitle:
-      "استمتع بأفضل الموسيقى السودانية واستكشف عالم الإيقاعات والألحان الساحرة",
+    subtitle: 'استمتع بأفضل الموسيقى السودانية واستكشف عالم الإيقاعات والألحان الساحرة',
     tagline: 'Genres',
   },
   items: [
     {
-      title: 'ديشاك سودان',
-      description:
-        'رحلة ساحرة إلى تراث السودان، حيث يتألق الإيقاع التقليدي بألوانه الغنية وأصواته العذبة',
-      icon: IconPyramid,
-      callToAction: {
-        text: 'Discover now',
-        href: '/',
-      },
-    },
-    {
       title: 'ديشاك ذهبي',
-      description:
-        'الكلاسيكيات الذهبية في الموسيقى السودانية، تسلط الضوء على الأغاني الخالدة والألحان ',
+      description: 'الكلاسيكيات الذهبية في الموسيقى السودانية، تسلط الضوء على الأغاني الخالدة والألحان ',
       icon: IconRectangularPrism,
       callToAction: {
-        text: 'Discover now',
+        text: 'Play now',
         href: '/gold',
       },
     },
@@ -74,17 +54,26 @@ export const homeGenres: GenreProps = {
       description: 'موسيقى الحقيبة تأخذك في رحلة موسيقية متنوعة ومتجددة، تتنوع بين الأصوات والألحان',
       icon: IconBriefcase,
       callToAction: {
-        text: 'Discover now',
+        text: 'Play now',
         href: '/haqiba',
       },
     },
     {
-      title: 'ديشاك ثمانينات',
-      description: 'لحظات ملهمة من عصر الثمانينيات، حيث يعزف الإيقاع بألحانه المثيرة وطاقته المتفجرة',
-      icon: IconDeviceAudioTape,
+      title: 'ديشاك سودان',
+      description: 'رحلة ساحرة إلى تراث السودان، حيث يتألق الإيقاع التقليدي بألوانه الغنية وأصواته العذبة',
+      icon: IconPyramid,
       callToAction: {
-        text: 'Discover now',
-        href: '/eighties',
+        text: 'Play now',
+        href: '/',
+      },
+    },
+    {
+      title: 'ديشاك راب',
+      description: 'ديشاك راب يجلب لكم أفضل ما في ساحة الراب السودانية.',
+      icon: IconFlame,
+      callToAction: {
+        text: 'Play now',
+        href: '/rap',
       },
     },
     {
@@ -92,8 +81,17 @@ export const homeGenres: GenreProps = {
       description: 'تناغم الأصوات الحديثة والإيقاعات النابضة بالحياة، تحفل هذه الموسيقى بالشغف والطاقة الشبابية.',
       icon: IconPlant,
       callToAction: {
-        text: 'Discover now',
+        text: 'Play now',
         href: '/youth',
+      },
+    },
+    {
+      title: 'ديشاك ثمانينات',
+      description: 'لحظات ملهمة من عصر الثمانينيات، حيث يعزف الإيقاع بألحانه المثيرة وطاقته المتفجرة',
+      icon: IconDeviceAudioTape,
+      callToAction: {
+        text: 'Play now',
+        href: '/eighties',
       },
     },
   ],
@@ -161,7 +159,7 @@ export const homeContentTwo: ContentProps = {
   ],
   image: {
     src: heroImg,
-        alt: 'Colorful Image',
+    alt: 'Colorful Image',
   },
   isReversed: true,
   isAfterContent: true,

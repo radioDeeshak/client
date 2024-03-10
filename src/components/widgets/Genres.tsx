@@ -3,24 +3,34 @@ import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 import ItemGrid from '../common/ItemGrid';
 
-
-const Genres = ({ id, header, items, columns = 3, hasBackground = false }: GenreProps) => (
-  
-  <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="scroll-mt-16 max-w-6xl">
-    {header &&  <Headline header={header} titleClass="text-4xl md:text-5xl" />}
+const GenresContent = ({
+  header,
+  items,
+  columns = 3,
+  isBeforeContent,
+  isAfterContent,
+  id,
+  hasBackground = false,
+}: GenreProps) => (
+  <WidgetWrapper
+    id={id ? id : ''}
+    hasBackground={hasBackground}
+    containerClass={`max-w-6xl ${isBeforeContent ? 'md:pb-8 lg:pb-12' : ''} ${
+      isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''
+    }`}
+  >
+    {header && <Headline header={header} titleClass="text-4xl md:text-5xl" />}
     <ItemGrid
       id={id}
       items={items}
       columns={columns}
-      defaultColumns={2}
-      containerClass={`pb-6 ${columns === 2 ? 'max-w-5xl' : ''}`}
-      panelClass={`flex max-w-full ${columns === 2 ? 'sm:max-w-md mx-auto' : ''}`}
-      iconClass="h-12 w-12 flex items-center justify-center rounded-md text-white bg-primary-900 p-2 md:p-3 mt-1.5 mb-4 mr-4 rtl:ml-4 rtl:mr-0"
+      defaultColumns={3}
+      panelClass="card h-full relative flex flex-col text-center p-8"
+      iconClass="h-12 w-12 flex justify-center items-center rounded-md text-white bg-primary-800 mb-6 p-2 md:p-3 mx-auto"
       titleClass="mb-3 text-xl font-bold"
       descriptionClass="text-gray-600 dark:text-slate-400"
-      actionClass="justify-start"
     />
   </WidgetWrapper>
 );
 
-export default Genres;
+export default GenresContent;

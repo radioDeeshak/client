@@ -1,11 +1,6 @@
 import { Metadata } from 'next';
-import FAQs from '~/components/widgets/FAQs';
-import Hero from '~/components/widgets/Hero';
-import Play from '~/components/widgets/Play';
-import {
-  genresFaqs,
-  genresHero,
-} from '~/shared/data/pages/genres.data';
+import GenresContent from '~/components/widgets/Genres';
+import { genresHero, genresContent } from '~/shared/data/pages/genres.data';
 
 export const metadata: Metadata = {
   title: 'Genres',
@@ -14,9 +9,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <>
-      <Hero {...genresHero} />
-      <FAQs {...genresFaqs} />
-      <Play />
+      <GenresContent {...genresContent} />
     </>
   );
 };

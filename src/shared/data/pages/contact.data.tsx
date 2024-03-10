@@ -13,7 +13,7 @@ export const contactHero: HeroProps = {
   ),
 };
 
-export const contactUs: ContactProps = {
+export const contactContent: ContactProps = {
   id: 'contactTwo-on-contact',
   hasBackground: true,
   header: {
@@ -33,7 +33,7 @@ export const contactUs: ContactProps = {
     },
     {
       title: 'Contact',
-      description: ['Mobile: +1 (123) 456-7890', 'Mail: tailnext@gmail.com'],
+      description: ['Mobile: +1 (123) 456-7890', 'Mail: info@deeshak.com'],
       icon: IconPhoneCall,
     },
     {
@@ -107,5 +107,3 @@ export const contactUs: ContactProps = {
     },
   },
 };
-
-

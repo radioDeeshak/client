@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Title, Subtitle, Description, Primary, Controls, Story, Stories } from '@storybook/blocks';
 
-import Component from '~/components/widgets/MissionAndValues';
+import Component from '~/components/widgets/MissionAndVision';
 import { features4Services as mockData } from '~/shared/data/pages/genres.data';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export

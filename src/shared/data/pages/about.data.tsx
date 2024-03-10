@@ -1,44 +1,11 @@
-import {
-  ContactProps,
-  FAQsProps,
-  GenreProps,
-  HeroProps,
-  StatsProps,
-  StepsProps,
-  TeamProps,
-} from '~/shared/types';
+import { GenreProps, HeroProps, StepsProps } from '~/shared/types';
 import hero2Img from '~/assets/images/hero2.jpg';
-import {
-  IconAdjustments,
-  IconAward,
-  IconBook,
-  IconBrandLinkedin,
-  IconBrandTwitter,
-  IconBulb,
-  IconCirclesRelation,
-  IconClock,
-  IconFlame,
-  IconHeartHandshake,
-  IconHomeEco,
-  IconMail,
-  IconMapPin,
-  IconNumber1,
-  IconNumber2,
-  IconNumber3,
-  IconNumber4,
-  IconNumber5,
-  IconPalette,
-  IconPhoneCall,
-  IconPuzzle2,
-  IconScale,
-  IconThumbUp,
-  IconUser,
-} from '@tabler/icons-react';
+import { IconAward, IconNumber1, IconNumber2, IconNumber3, IconNumber4, IconNumber5 } from '@tabler/icons-react';
 
-export const hero2About: HeroProps = {
+export const aboutHero: HeroProps = {
   title: 'About Us',
   subtitle:
-  'Welcome to Radio Deeshak, your go-to web radio station. We are passionate about delivering the best music and content to our listeners. Our primary goal is to entertain and connect with our audience, providing a unique radio experience that transcends traditional boundaries. We are proud to be a 50% gender-balanced company, committed to promoting equality and diversity in the industry. Our vibrant logo and color scheme reflect our dynamic and innovative approach to web radio. For any inquiries, feel free to contact us at 1-810-399-3576.',
+    'مرحبًا بك في Radio Deeshak، محطة الراديو المفضلة لديك على الويب. نحن متحمسون لتقديم أفضل الموسيقى والمحتوى لمستمعينا. هدفنا الأساسي هو الترفيه والتواصل مع جمهورنا، وتوفير تجربة إذاعية فريدة تتجاوز الحدود التقليدية. نحن فخورون بكوننا شركة متوازنة بين الجنسين بنسبة 50%، وملتزمة بتعزيز المساواة والتنوع في الصناعة. يعكس شعارنا ونظام الألوان النابض بالحياة أسلوبنا الديناميكي والمبتكر في راديو الويب. لأية استفسارات، لا تتردد في الاتصال بنا على 1-810-399-3576.',
   callToAction: {
     text: 'View jobs',
     href: 'https://www.linkedin.com/',
@@ -54,84 +21,27 @@ export const hero2About: HeroProps = {
   },
 };
 
-// Stats data on About page *******************
-export const statsAbout: StatsProps = {
-  id: 'stats-on-about',
-  hasBackground: true,
-  items: [
-    {
-      title: 321578,
-      description: 'Streams',
-    },
-    {
-      title: 5,
-      description: 'Genres',
-    },
-    {
-      title: 123,
-      description: 'Artists',
-    },
-    {
-      title: 2,
-      description: 'Awards',
-    }
-  ],
-};
-
 export const mission: GenreProps = {
   id: 'genres-four-on-about',
   hasBackground: false,
   header: {
     title: 'Our mission',
     subtitle:
-      'Quisque laoreet nisi et lectus consectetur, at placerat libero dictum. Donec sed hendrerit turpis. Nunc vel nibh blandit, hendrerit turpis non, mattis magna. Duis feugiat dui mi, eget iaculis ligula gravida congue. Nam quis mauris id eros imperdiet imperdiet. In et dolor non nisi vestibulum rhoncus nec eget dolor.',
-    tagline: 'Mission and Values',
+      'نحن في راديو ديشاك نسعى إلى تقديم محتوى إذاعي متميز ومتنوع يعكس تنوع الثقافات والمواهب، مع التركيز على الجودة والابتكار، وتعزيز قيم المساواة والتنوع في الصناعة، وذلك لخلق تجربة إذاعية استثنائية لمستمعينا في كل مكان.',
+    tagline: 'Mission and Vision',
   },
 };
 
-export const values: GenreProps = {
+export const vision: GenreProps = {
   id: 'genres-four-on-about-two',
   hasBackground: false,
   header: {
-    title: 'Our values',
-    subtitle: 'Etiam tellus tortor, mattis id mauris et, lobortis ullamcorper nunc.',
+    title: 'Our vision',
+    subtitle:
+      'نسعى في راديو ديشاك إلى أن نكون الصوت الرائد في عالم الإذاعة عبر الإنترنت، نقدم تجربة استماع مميزة تلهم وتسلي المستمعين، وتعزز التواصل والتفاعل الإيجابي في المجتمع ',
   },
   isAfterContent: true,
   columns: 2,
-  items: [
-    {
-      title: 'Customer-centricity',
-      description: 'Nullam non sodales massa. Ut justo neque, elementum et vehicula vel, pellentesque non orci.',
-      icon: IconUser,
-    },
-    {
-      title: 'Innovation and adaptability',
-      description:
-        'Etiam ornare, purus nec venenatis porttitor, velit leo convallis dui, at porttitor nibh tortor quis velit.',
-      icon: IconBulb,
-    },
-    {
-      title: 'Quality assurance',
-      description: 'Morbi sit amet arcu vitae metus molestie auctor sit amet in risus. Sed vel lacinia purus.',
-      icon: IconThumbUp,
-    },
-    {
-      title: 'Accessibility and customization',
-      description: 'Phasellus id cursus urna. Nullam feugiat tellus sed euismod venenatis.',
-      icon: IconAdjustments,
-    },
-    {
-      title: 'Collaboration and partnership',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis.',
-      icon: IconHeartHandshake,
-    },
-    {
-      title: 'Ethical and responsible design',
-      description: 'Maecenas urna augue, commodo vitae lectus euismod, tempor aliquam arcu.',
-      icon: IconHomeEco,
-    },
-  ],
 };
 
 export const steps: StepsProps = {
@@ -141,83 +51,39 @@ export const steps: StepsProps = {
   header: {
     title: 'History of Radio Deeshak!',
     subtitle:
-      'Duis sit amet magna et sapien cursus fermentum. Curabitur ac mauris non magna condimentum scelerisque. Aliquam nunc ipsum, semper ac scelerisque sit amet, pulvinar vitae libero.',
+      'تأسست راديو ديشاك عام ٢٠١٠ كواحدة من أبرز محطات الراديو على الويب. بدأت رحلتها كفكرة بسيطة وتحولت إلى واحدة من أكثر المحطات شهرة وتأثيراً في عالم البث الإذاعي عبر الإنترنت.',
     tagline: 'Company History',
   },
   items: [
     {
       title: 'Our foundation',
       description:
-        'Donec pharetra, justo a rutrum venenatis, augue erat porta leo, non eleifend dui lectus ut turpis. Fusce tincidunt mattis magna eu commodo. Proin non facilisis enim, ut luctus dolor.',
+        'تأسست راديو ديشاك على أسس راسخة من التميز والتجربة، حيث تسعى لتقديم محتوى إذاعي مميز يلبي تطلعات المستمعين ويثري حياتهم.',
       icon: IconNumber1,
     },
     {
       title: 'The early years',
       description:
-        'Nunc scelerisque dui non nulla faucibus, sed elementum urna congue. Donec varius nisi sit amet massa malesuada euismod. Donec auctor interdum leo eget ultricies.',
+        'بدأت راديو ديشاك رحلتها الإذاعية بخطى ثابتة وثقة، حيث استطاعت خلال السنوات الأولى تحقيق نجاحات ملحوظة وكسب ثقة جمهورها المتزايد.',
       icon: IconNumber2,
     },
     {
       title: 'Growth',
       description:
-        'Vestibulum euismod dolor vel magna consectetur, vitae ornare metus finibus. Nam nec magna lacinia, cursus purus ut, pellentesque ex. Aliquam nec porta sapien, nec iaculis odio. Donec sed lacus arcu.',
+        'شهدت راديو ديشاك نمواً ملحوظاً على مر السنين، حيث ازدادت قاعدة مستمعيها وتوسعت نطاق تأثيرها وتواجدها على الساحة الإذاعية العالمية.',
       icon: IconNumber3,
     },
     {
       title: 'Expanding horizons',
       description:
-        'Aenean mollis est ac quam viverra, eget dictum justo iaculis. Morbi venenatis neque sed blandit faucibus. Pellentesque sit amet justo at ligula eleifend lacinia. Etiam nec orci quam.',
+        'تطورت راديو ديشاك لتصبح واحدة من أكبر المحطات الإذاعية على الويب، وتوسعت في تقديم محتوى إذاعي متنوع ومميز يلبي تطلعات مستمعيها.',
       icon: IconNumber4,
     },
     {
       title: 'Our ongoing commitment',
       description:
-        'Sed vel purus a odio tincidunt mollis. Nam et tortor est. Aliquam sodales interdum tortor ac condimentum. Suspendisse laoreet nulla est, ac luctus est tempus ut.',
+        'تلتزم راديو ديشاك بتقديم تجربة إذاعية مميزة ومتنوعة لمستمعيها، وتواصل تطوير وتحسين محتواها الإذاعي لتلبية تطلعات جمهورها المتزايد.',
       icon: IconNumber5,
-    },
-  ],
-};
-
-export const culture: GenreProps = {
-  id: 'featuresThree-on-about',
-  hasBackground: false,
-  columns: 3,
-  header: {
-    title: 'Our culture',
-    subtitle:
-      'Nullam maximus ante eros, ac eleifend mi condimentum ut. Donec volutpat felis ac purus pretium, vitae mollis quam scelerisque.',
-    tagline: 'culture',
-  },
-  items: [
-    {
-      title: 'Customer engagement',
-      description: 'Nullam non sodales massa. Ut justo neque, elementum et vehicula vel, pellentesque non orci.',
-      icon: IconCirclesRelation,
-    },
-    {
-      title: 'Creativity and design excellence',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      icon: IconPalette,
-    },
-    {
-      title: 'Continuous learning',
-      description: 'Morbi sit amet arcu vitae metus molestie auctor sit amet in risus. Sed vel lacinia purus.',
-      icon: IconBook,
-    },
-    {
-      title: 'Collaboration and cross-functionality',
-      description: 'Phasellus id cursus urna. Nullam feugiat tellus sed euismod venenatis.',
-      icon: IconPuzzle2,
-    },
-    {
-      title: 'Entrepreneurial spirit',
-      description: 'Phasellus interdum placerat enim sed vehicula. Ut tincidunt, magna in iaculis maximus.',
-      icon: IconFlame,
-    },
-    {
-      title: 'Employee well-being and balance',
-      description: 'Maecenas urna augue, commodo vitae lectus euismod, tempor aliquam arcu.',
-      icon: IconScale,
     },
   ],
 };
@@ -253,4 +119,3 @@ export const record: GenreProps = {
     },
   ],
 };
-

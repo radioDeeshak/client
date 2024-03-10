@@ -33,7 +33,7 @@ const Steps = ({
             subtitleClass={isImageDisplayed ? 'text-left rtl:text-right' : ''}
           />
         )}
-        <Timeline items={items} defaultIcon={IconCheck} iconClass="text-primary border-primary-900" />
+        <Timeline items={items} defaultIcon={IconCheck} iconClass="text-primary border-primary-800" />
       </div>
       {isImageDisplayed && (
         <div className="relative md:basis-1/2">

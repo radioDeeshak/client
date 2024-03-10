@@ -5,13 +5,7 @@ import { SITE } from '~/config.js';
 import Hero from '~/components/widgets/Hero';
 import Genres from '~/components/widgets/Genres';
 import Content from '~/components/widgets/Content';
-import Play from '~/components/widgets/Play';
-import {
-  homeContentOne,
-  homeContentTwo,
-  homeGenres,
-  homeHero,
-} from '~/shared/data/pages/home.data';
+import { homeContentOne, homeContentTwo, homeGenres, homeHero } from '~/shared/data/pages/home.data';
 
 export const metadata: Metadata = {
   title: SITE.title,
@@ -24,7 +18,6 @@ export default function Page() {
       <Genres {...homeGenres} />
       <Content {...homeContentOne} />
       <Content {...homeContentTwo} />
-      <Play />
     </>
   );
 }
