@@ -10,9 +10,16 @@ import { headerData } from '~/shared/data/global.data';
 import CTA from '../common/CTA';
 import { CallToActionType } from '~/shared/types';
 import Play from '~/components/widgets/Play';
+import { useMediaQuery } from '@react-hook/media-query';
 
 const Header = () => {
   const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
+  const isMobile = useMediaQuery('only screen and (max-width: 768px)');
+  const [selectedItem, setSelectedItem] = useState<number>(3);
+
+  const handleListItemClick = (index: number) => {
+    setSelectedItem(index);
+  };
 
   const updatedIsDropdownOpen =
     links &&
@@ -51,7 +58,7 @@ const Header = () => {
 
   return (
     <header
-      className={`top-0 z-40 mx-auto w-full flex-none bg-white transition-all duration-100 ease-in dark:bg-slate-900 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 ${
+      className={`top-0 z-40 mx-auto w-full flex-none bg-white transition-all duration-100 ease-in dark:bg-zinc-900 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-zinc-900/90 ${
         isSticky ? 'sticky' : 'relative'
       }`}
       id="header"
@@ -72,15 +79,18 @@ const Header = () => {
           </div>
         </div>
         <nav
-          className={`${isToggleMenuOpen ? 'block' : 'hidden'} h-screen md:w-full justify-center ${
-            position === 'right' ? 'justify-end' : position === 'left' ? 'justify-start' : 'justify-center'
-          } w-auto overflow-y-auto dark:text-slate-200 md:mx-5 md:flex md:h-auto md:items-center md:overflow-visible`}
+          className={`${isToggleMenuOpen ? 'block' : 'hidden'} h-screen md:w-full flex justify-center w-auto overflow-y-auto dark:text-zinc-200 md:mx-5 md:flex md:h-auto md:items-center md:overflow-visible`}
           aria-label="Main navigation"
         >
-          <ul className="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base">
+          <ul
+            className={`flex w-full flex-col ${isMobile ? 'items-center' : 'pt-8 '} text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base`}
+          >
             {links &&
-              links.map(({ label, href, icon: Icon, links }, index) => (
-                <li key={`item-link-${index}`} className={links?.length ? 'dropdown' : ''}>
+              (isMobile ? links.slice().reverse() : links).map(({ label, href, icon: Icon, links }, index) => (
+                <li
+                  key={`item-link-${index}`}
+                  className={links?.length ? 'dropdown' : 'dark:hover:bg-gray-700 md:hover:bg-gray-200 block rounded'}
+                >
                   {links && links.length ? (
                     <>
                       <button
@@ -92,7 +102,7 @@ const Header = () => {
                       <ul
                         className={`${
                           isDropdownOpen[index] ? 'block' : 'md:hidden'
-                        } rounded pl-4 font-medium drop-shadow-xl md:absolute md:min-w-[200px] md:bg-white/90 md:pl-0 md:backdrop-blur-md dark:md:bg-slate-900/90`}
+                        } rounded pl-4 font-medium drop-shadow-xl md:absolute md:min-w-[200px] md:bg-white/90 md:pl-0 md:backdrop-blur-md dark:md:bg-zinc-900/90`}
                       >
                         {links.map(({ label: label2, href: href2 }, index2) => (
                           <li key={`item-link-${index2}`}>
@@ -111,9 +121,14 @@ const Header = () => {
                     </>
                   ) : (
                     <Link
-                      className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white"
+                      className={`flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white ${
+                        index === selectedItem ? 'border-b-2 border-primary' : ''
+                      }`}
                       href={href as string}
-                      onClick={() => (isToggleMenuOpen ? handleToggleMenuOnClick() : handleDropdownOnClick(index))}
+                      onClick={() => {
+                        handleListItemClick(index);
+                        isToggleMenuOpen ? handleToggleMenuOnClick() : handleDropdownOnClick(index);
+                      }}
                     >
                       {label}
                     </Link>
@@ -128,10 +143,16 @@ const Header = () => {
           } fixed bottom-0 left-0 w-full justify-end p-3 md:static md:mb-0 md:flex md:w-auto md:self-center md:p-0`}
         >
           <div className="flex w-full items-center justify-between md:w-auto">
-            {showToggleTheme /* && <ToggleDarkMode /> */}
-            <div className="justify-end bottom-0 right-0 m-3">
-              <Play />
-            </div>
+            {showToggleTheme && <ToggleDarkMode />}
+            {showRssFeed && (
+              <Link
+                className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                aria-label="RSS Feed"
+                href=""
+              >
+                <IconRss className="h-5 w-5" />
+              </Link>
+            )}
             {actions && actions.length > 0 && (
               <div className="ml-4 flex w-max flex-wrap justify-end">
                 {actions.map((callToAction, index) => (
@@ -143,6 +164,9 @@ const Header = () => {
                 ))}
               </div>
             )}
+            <div className=" flex w-max flex-wrap justify-end md:px-6">
+              <Play />
+            </div>
           </div>
         </div>
       </div>

@@ -1,39 +1,31 @@
 import Image from 'next/image';
-import { IconCheck } from '@tabler/icons-react';
-
 import { ContentProps } from '~/shared/types';
 import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
+import Play from '~/components/widgets/Play';
 
-const Content = ({ header, content, image, isReversed, isAfterContent, id, hasBackground = false }: ContentProps) => (
+const Content = ({ header, image, isAfterContent, id, hasBackground = false }: ContentProps) => (
   <WidgetWrapper
     id={id ? id : ''}
-    hasBackground={hasBackground}
+    hasBackground={!hasBackground}
     containerClass={`${isAfterContent ? 'py-0 md:py-0 lg:py-0 pb-12 md:pb-16 lg:pb-20' : ''}`}
   >
-    {header && <Headline header={header} titleClass="text-3xl sm:text-5xl" />}
-    <div className="mx-auto max-w-7xl">
-      <div className={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
-        <div className="self-center md:basis-1/2">
-          {content && <div className="mb-8 lg:mb-12 text-lg text-gray-600 dark:text-slate-400">{content}</div>}
-        </div>
-        <div aria-hidden="true" className="mt-10 md:mt-0 md:basis-1/2">
-          {image && (
-            <div className="relative m-auto max-w-4xl">
-              <Image
-                className="mx-auto w-full rounded-lg shadow-lg bg-gray-400 dark:bg-slate-700"
-                src={image.src}
-                width={828}
-                height={828}
-                alt={image.alt}
-                sizes="(max-width: 768px) 100vw, 432px"
-                placeholder="blur"
-                quality={50}
-              />
-            </div>
-          )}
-        </div>
+    {image && (
+      <div className="relative m-auto max-w-4xl flex justify-center">
+        {' '}
+        <Image
+          className="w-48 h-48 rounded-lg shadow-lg bg-gray-400 dark:bg-slate-700" // Adjusted width and height
+          src={image.src}
+          alt={image.alt}
+          quality={50}
+        />
       </div>
+    )}
+    <div className="md:mt-12 flex justify-center">
+      {header && <Headline header={header} titleClass="text-3xl sm:text-5xl" />}
+    </div>
+    <div className="flex justify-center">
+      <Play />
     </div>
   </WidgetWrapper>
 );

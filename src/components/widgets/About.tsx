@@ -30,7 +30,7 @@ const AboutHero = ({
                   </h1>
                 )}
                 <div className="mx-auto max-w-3xl">
-                  {subtitle && <p className="mb-8 text-xl font-normal text-gray-600 dark:text-slate-400">{subtitle}</p>}
+                  {subtitle && <p className="mb-8 text-xl font-normal text-gray-600 dark:text-zinc-400">{subtitle}</p>}
                   <div className="flex max-w-none flex-col flex-nowrap justify-center gap-4 sm:flex-row md:m-0 md:justify-start">
                     {callToAction && <CTA callToAction={callToAction} linkClass="btn btn-primary" />}
                     {callToAction2 && <CTA callToAction={callToAction2} linkClass="btn" />}
@@ -42,7 +42,7 @@ const AboutHero = ({
               <div className="relative m-auto h-full max-w-4xl object-cover">
                 {image && (
                   <Image
-                    className="mx-auto h-full w-auto rounded-md bg-gray-400 object-cover drop-shadow-2xl dark:bg-slate-700"
+                    className="mx-auto h-full w-auto rounded-md bg-gray-400 object-cover drop-shadow-2xl dark:bg-zinc-700"
                     src={image.src}
                     alt={image.alt}
                     width={540}

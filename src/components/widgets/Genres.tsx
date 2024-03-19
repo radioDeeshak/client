@@ -14,10 +14,10 @@ const GenresContent = ({
 }: GenreProps) => (
   <WidgetWrapper
     id={id ? id : ''}
-    hasBackground={hasBackground}
+    hasBackground={!hasBackground}
     containerClass={`max-w-6xl ${isBeforeContent ? 'md:pb-8 lg:pb-12' : ''} ${
       isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''
-    } bg-slate-50`}
+    } md:mx-auto md:px-4 lg:px-0`}
   >
     {header && <Headline header={header} titleClass="text-4xl md:text-5xl" />}
     <ItemGrid
@@ -26,9 +26,9 @@ const GenresContent = ({
       columns={columns}
       defaultColumns={3}
       panelClass="card h-full relative flex flex-col text-center p-8"
-      iconClass="h-12 w-12 flex justify-center items-center rounded-md text-white bg-primary-800 mb-6 p-2 md:p-3 mx-auto"
+      iconClass="h-12 w-12 flex justify-center items-center rounded-md text-white bg-primary-700 mb-6 p-2 md:p-3 mx-auto"
       titleClass="mb-3 text-xl font-bold"
-      descriptionClass="text-gray-600 dark:text-slate-400"
+      descriptionClass="text-gray-600 dark:text-zinc-400"
     />
   </WidgetWrapper>
 );

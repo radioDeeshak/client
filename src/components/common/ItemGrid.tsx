@@ -1,7 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 import type { ItemGrid as ItemGridType } from '~/shared/types';
 import CTA from './CTA';
-import Play from '../widgets/Play';
 
 const ItemGrid = ({
   id,
@@ -52,9 +51,17 @@ const ItemGrid = ({
                       {description}
                     </p>
                   )}
-                  <div className={'flex justify-center mt-4'}>
-                    <Play />
-                  </div>
+                  {callToAction && (
+                    <CTA
+                      callToAction={callToAction}
+                      linkClass={twMerge(
+                        `${
+                          title || description ? 'mt-3' : ''
+                        } text-primary font-bold text-zinc-900 hover:underline dark:text-gray-200 cursor-pointer`,
+                        actionClass,
+                      )}
+                    />
+                  )}
                 </div>
               </div>
             </div>

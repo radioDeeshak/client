@@ -52,7 +52,7 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <div
-        className={`bg-white tracking-tight text-gray-900 antialiased dark:bg-slate-900 dark:text-slate-300 ${customFont.variable} font-sans`}
+        className={`bg-white tracking-tight text-gray-900 antialiased dark:bg-zinc-900 dark:text-zinc-300 ${customFont.variable} font-sans`}
       >
         <Story />
       </div>
