@@ -45,7 +45,7 @@ export const homeGenres: GenreProps = {
       description: 'الكلاسيكيات الذهبية في الموسيقى السودانية، تسلط الضوء على الأغاني الخالدة والألحان الرائعة',
       icon: IconRectangularPrism,
       callToAction: {
-        text: 'Discover now',
+        text: 'خش',
         href: '/genres/gold',
       },
     },
@@ -54,7 +54,7 @@ export const homeGenres: GenreProps = {
       description: 'موسيقى الحقيبة تأخذك في رحلة موسيقية متنوعة ومتجددة، تتنوع بين الأصوات والألحان',
       icon: IconBriefcase,
       callToAction: {
-        text: 'Discover now',
+        text: 'خش',
         href: '/genres/haqiba',
       },
     },
@@ -63,7 +63,7 @@ export const homeGenres: GenreProps = {
       description: 'رحلة ساحرة إلى تراث السودان، حيث يتألق الإيقاع التقليدي بألوانه الغنية وأصواته العذبة',
       icon: IconPyramid,
       callToAction: {
-        text: 'Discover now',
+        text: 'خش',
         href: '/genres/sudani',
       },
     },
@@ -72,7 +72,7 @@ export const homeGenres: GenreProps = {
       description: 'ديشاك راب يجلب لكم أفضل ما في ساحة الراب السودانية.',
       icon: IconFlame,
       callToAction: {
-        text: 'Discover now',
+        text: 'خش',
         href: '/genres/rap',
       },
     },
@@ -81,7 +81,7 @@ export const homeGenres: GenreProps = {
       description: 'تناغم الأصوات الحديثة والإيقاعات النابضة بالحياة، تحفل هذه الموسيقى بالشغف والطاقة الشبابية.',
       icon: IconPlant,
       callToAction: {
-        text: 'Discover now',
+        text: 'خش',
         href: '/genres/youth',
       },
     },
@@ -90,7 +90,7 @@ export const homeGenres: GenreProps = {
       description: 'لحظات ملهمة من عصر الثمانينيات، حيث يعزف الإيقاع بألحانه المثيرة وطاقته المتفجرة',
       icon: IconDeviceAudioTape,
       callToAction: {
-        text: 'Discover now',
+        text: 'خش',
         href: '/genres/eighties',
       },
     },

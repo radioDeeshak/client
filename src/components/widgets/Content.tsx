@@ -22,7 +22,7 @@ const Content = ({ header, image, isAfterContent, id, hasBackground = false }: C
       </div>
     )}
     <div className="md:mt-12 flex justify-center">
-      {header && <Headline header={header} titleClass="text-3xl sm:text-5xl" />}
+      {header && <Headline header={header} titleClass="text-3xl sm:text-5xl text-primary-500 dark:text-primary-500" />}
     </div>
     <div className="flex justify-center">
       <Play />

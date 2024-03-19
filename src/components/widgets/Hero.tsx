@@ -14,7 +14,7 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: 
               </p>
             )}
             {title && (
-              <h1 className="leading-tighter font-heading mb-6 text-4xl font-bold tracking-tighter md:text-5xl lg:text-8xl">
+              <h1 className="text-primary-500 dark:text-primary-500 leading-tighter font-heading mb-6 text-4xl font-bold tracking-tighter md:text-5xl lg:text-8xl">
                 {title}
               </h1>
             )}

@@ -29,11 +29,11 @@ const Steps = ({
           <Headline
             header={header}
             containerClass={isImageDisplayed ? 'text-left rtl:text-right' : ''}
-            titleClass="text-3xl sm:text-4xl"
+            titleClass="text-3xl sm:text-4xl text-primary-500 dark:text-primary-500"
             subtitleClass={isImageDisplayed ? 'text-left rtl:text-right' : ''}
           />
         )}
-        <Timeline items={items} defaultIcon={IconCheck} iconClass="text-primary border-primary-800" />
+        <Timeline items={items} defaultIcon={IconCheck} iconClass="text-primary border-primary-500" />
       </div>
       {isImageDisplayed && (
         <div className="relative md:basis-1/2">

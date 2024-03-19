@@ -5,8 +5,6 @@ import Headline from '../common/Headline';
 
 const MissionAndValues = ({
   header,
-  items,
-  columns = 2,
   image,
   isBeforeContent,
   isAfterContent,
@@ -19,7 +17,7 @@ const MissionAndValues = ({
     hasBackground={hasBackground}
     containerClass={`${isBeforeContent ? 'md:pb-8 lg:pb-12' : ''} ${isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''}`}
   >
-    {header && <Headline header={header} titleClass="text-4xl md:text-5xl" />}
+    {header && <Headline header={header} titleClass="text-4xl md:text-5xl text-primary-500 dark:text-primary-500" />}
     {isImageDisplayed && (
       <div aria-hidden="true" className="aspect-w-16 aspect-h-7">
         {image && (
