@@ -9,7 +9,6 @@ import Footer from '~/components/widgets/Footer';
 import { Noto_Naskh_Arabic as CustomFont } from 'next/font/google';
 import '~/assets/styles/base.css';
 
-// add arabic font subset
 const customFont = CustomFont({ subsets: ['latin', 'arabic'], variable: '--font-custom' });
 export interface LayoutProps {
   children: React.ReactNode;

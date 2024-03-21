@@ -14,14 +14,14 @@ const Content = ({ header, image, isAfterContent, id, hasBackground = false }: C
       <div className="relative m-auto max-w-4xl flex justify-center">
         {' '}
         <Image
-          className="w-48 h-48 rounded-lg shadow-lg bg-gray-400 dark:bg-slate-700" // Adjusted width and height
+          className="w-48 h-48 rounded-lg shadow-lg bg-gray-400 dark:bg-slate-700"
           src={image.src}
           alt={image.alt}
           quality={50}
         />
       </div>
     )}
-    <div className="md:mt-12 flex justify-center">
+    <div className="mt-12 flex justify-center">
       {header && <Headline header={header} titleClass="text-3xl sm:text-5xl text-primary-500 dark:text-primary-500" />}
     </div>
     <div className="flex justify-center">

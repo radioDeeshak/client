@@ -1,6 +1,6 @@
 import { CallToActionProps, ContentProps } from '~/shared/types';
 
-import heroImg from '~/assets/images/hero.jpg';
+import heroImg from '~/assets/images/logo.jpg';
 
 export const eightiesContent: ContentProps = {
   id: 'eightiesContent',
