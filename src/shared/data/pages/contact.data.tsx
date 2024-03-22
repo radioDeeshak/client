@@ -27,7 +27,7 @@ export const contactContent: ContactProps = {
     },
     {
       title: 'Contact',
-      description: ['Mobile: +1 (123) 456-7890', 'Mail: info@deeshak.com'],
+      description: ['Mobile: +1 (123) 456-7890', 'Mail: contact@deeshak.com'],
       icon: IconPhoneCall,
     },
   ],

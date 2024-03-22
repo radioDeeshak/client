@@ -11,10 +11,6 @@ export const headerData: HeaderProps = {
       label: 'من نحن',
       href: '/about',
     },
-    // {
-    //   label: 'المعرض',
-    //   href: '/gallery',
-    // },
     {
       label: 'تيارات',
       href: '/genres',
@@ -35,12 +31,8 @@ export const headerData: HeaderProps = {
 export const footerData: FooterProps = {
   links: [
     {
-      label: 'Terms & Conditions',
+      label: `All Rights Reserved © ${new Date().getFullYear()} · Deeshak Radio`,
       href: '/terms',
-    },
-    {
-      label: 'Privacy Policy',
-      href: '/privacy',
     },
   ],
   columns: [
@@ -50,7 +42,7 @@ export const footerData: FooterProps = {
     },
     {
       title: 'Email',
-      texts: ['Info: info@deeshak.com'],
+      texts: ['Contact: contact@deeshak.com'],
     },
   ],
   socials: [
@@ -61,12 +53,13 @@ export const footerData: FooterProps = {
   footNote: (
     <div className="mr-4 text-sm dark:text-zinc-400">
       <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
-      Made by{' '}
-      <a className="text-orange-600 hover:underline dark:text-gray-200" href="https://amsik.io/">
-        {' '}
-        Amsik Development Studio
-      </a>{' '}
-      · All rights reserved.
+      <span className="text-xs">
+        Powered by{' '}
+        <a className="text-orange-600 hover:underline dark:text-gray-200" href="https://amsik.io/">
+          {' '}
+          Amsik Development Studio
+        </a>
+      </span>
     </div>
   ),
 };

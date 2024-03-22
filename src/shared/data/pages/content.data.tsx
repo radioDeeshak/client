@@ -6,7 +6,7 @@ export const eightiesContent: ContentProps = {
   id: 'eightiesContent',
   hasBackground: false,
   header: {
-    title: 'ديشاك ثمانينات',
+    title: 'ديشاك فضي',
     subtitle: 'لحظات ملهمة من عصر الثمانينيات، حيث يعزف الإيقاع بألحانه المثيرة وطاقته المتفجرة',
     tagline: 'Content',
   },
@@ -91,8 +91,8 @@ export const youthContent: ContentProps = {
   id: 'youthContent',
   hasBackground: false,
   header: {
-    title: 'ديشاك شباب',
-    subtitle: 'تناغم الأصوات الحديثة والإيقاعات النابضة بالحياة، تحفل هذه الموسيقى بالشغف والطاقة الشبابية.',
+    title: 'ديشاك برونزي',
+    subtitle: 'تناغم الأصوات الحديثة والإيقاعات النابضة بالحياة، تحفل هذه الموسيقى بالشغف والطاقة البرونزيية.',
     tagline: 'Content',
   },
   image: {

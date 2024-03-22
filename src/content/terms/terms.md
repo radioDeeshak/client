@@ -9,6 +9,6 @@ By accessing or using our website, you agree to be bound by these Terms of Servi
 - **Indemnification:** You agree to indemnify us for any claims arising from your use of the website.
 - **Governing Law:** These Terms are governed by [your jurisdiction]'s laws.
 - **Changes:** We may modify these Terms at any time, with notice.
-- **Contact:** Questions? Contact us at <info@deeshak.com>.
+- **Contact:** Questions? Contact us at <contact@deeshak.com>.
 
 By using our website, you agree to these Terms of Service.

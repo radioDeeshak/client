@@ -9,7 +9,6 @@ import ToggleMenu from '../atoms/ToggleMenu';
 import { headerData } from '~/shared/data/global.data';
 import CTA from '../common/CTA';
 import { CallToActionType } from '~/shared/types';
-import Play from '~/components/widgets/Play';
 import { useMediaQuery } from '@react-hook/media-query';
 
 const Header = () => {
@@ -164,9 +163,6 @@ const Header = () => {
                 ))}
               </div>
             )}
-            <div className=" flex w-max flex-wrap justify-end md:px-6">
-              <Play />
-            </div>
           </div>
         </div>
       </div>

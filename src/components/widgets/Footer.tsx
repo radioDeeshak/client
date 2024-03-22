@@ -1,15 +1,17 @@
 import { footerData } from '~/shared/data/global.data';
 
-const Footer2 = () => {
+const Footer = () => {
   const { links, columns, socials, footNote } = footerData;
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6">
-      <div className="xs:gap-8 grid grid-cols-4 gap-4 gap-y-8 py-8 md:py-12">
+      <div className="xs:gap-8 grid grid-cols-3 gap-4 gap-y-8 py-8 md:py-12">
+        {' '}
+        {/* Updated grid-cols-3 */}
         {columns.map(({ title, texts }, index) => (
           <div
             key={`item-column-${index}`}
-            className="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+            className="col-span-3 sm:col-span-2 md:col-span-1 lg:col-span-1 xl:col-span-1" // Updated col-span
           >
             <div className="mb-2 font-medium text-zinc-800 dark:text-gray-300">{title}</div>
             {texts &&
@@ -20,7 +22,9 @@ const Footer2 = () => {
               ))}
           </div>
         ))}
-        <div className="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1">
+        <div className="col-span-3 sm:col-span-2 md:col-span-1 lg:col-span-1 xl:col-span-1">
+          {' '}
+          {/* Updated col-span */}
           <div className="mb-2 font-medium text-zinc-800 dark:text-gray-300">Social</div>
           <ul className="mb-4 -ml-2 flex md:order-1 md:mb-0">
             {socials.map(({ label, icon: Icon, href }, index) => (
@@ -59,4 +63,4 @@ const Footer2 = () => {
   );
 };
 
-export default Footer2;
+export default Footer;

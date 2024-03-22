@@ -42,55 +42,55 @@ export const homeGenres: GenreProps = {
   items: [
     {
       title: 'ديشاك ذهبي',
-      description: 'الكلاسيكيات الذهبية في الموسيقى السودانية، تسلط الضوء على الأغاني الخالدة والألحان الرائعة',
+      description: 'أغنيات خالدة من العصر الذهبي',
       icon: IconRectangularPrism,
       callToAction: {
-        text: 'خش',
+        text: 'قريباً',
         href: '/genres/gold',
       },
     },
     {
       title: 'ديشاك حقيبة',
-      description: 'موسيقى الحقيبة تأخذك في رحلة موسيقية متنوعة ومتجددة، تتنوع بين الأصوات والألحان',
+      description: 'أغاني خالدة من عصر الأربعينيات الخمسينيات والستينيات',
       icon: IconBriefcase,
       callToAction: {
-        text: 'خش',
+        text: 'أسمع',
         href: '/genres/haqiba',
       },
     },
     {
       title: 'ديشاك سودان',
-      description: 'رحلة ساحرة إلى تراث السودان، حيث يتألق الإيقاع التقليدي بألوانه الغنية وأصواته العذبة',
+      description: 'رحلة ساحرة إلى تراث السودان',
       icon: IconPyramid,
       callToAction: {
-        text: 'خش',
+        text: 'أسمع',
         href: '/genres/sudani',
       },
     },
     {
       title: 'ديشاك راب',
-      description: 'ديشاك راب يجلب لكم أفضل ما في ساحة الراب السودانية.',
+      description: 'ديشاك راب يجلب لكم أفضل ما في ساحة الراب السودانية',
       icon: IconFlame,
       callToAction: {
-        text: 'خش',
+        text: 'قريباً',
         href: '/genres/rap',
       },
     },
     {
-      title: 'ديشاك شباب',
-      description: 'تناغم الأصوات الحديثة والإيقاعات النابضة بالحياة، تحفل هذه الموسيقى بالشغف والطاقة الشبابية.',
+      title: 'ديشاك برونزي',
+      description: 'أغاني خالدة من عصر التسعينيات',
       icon: IconPlant,
       callToAction: {
-        text: 'خش',
+        text: 'قريباً',
         href: '/genres/youth',
       },
     },
     {
-      title: 'ديشاك ثمانينات',
-      description: 'لحظات ملهمة من عصر الثمانينيات، حيث يعزف الإيقاع بألحانه المثيرة وطاقته المتفجرة',
+      title: 'ديشاك فضي',
+      description: 'أغاني خالدة من عصر السبعينيات والثمانينيات',
       icon: IconDeviceAudioTape,
       callToAction: {
-        text: 'خش',
+        text: 'قريباً',
         href: '/genres/eighties',
       },
     },
