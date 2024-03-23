@@ -1,15 +1,15 @@
 import { Metadata } from 'next';
 import Content from '~/components/widgets/Content';
-import { youthContent } from '~/shared/data/pages/content.data';
+import { sudanContent } from '~/shared/data/pages/content.data';
 
 export const metadata: Metadata = {
-  title: 'Youth',
+  title: 'Sudan',
 };
 
 const Page = () => {
   return (
     <>
-      <Content {...youthContent} />
+      <Content {...sudanContent} />
     </>
   );
 };

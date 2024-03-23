@@ -1,15 +1,15 @@
 import { Metadata } from 'next';
 import Content from '~/components/widgets/Content';
-import { sudaniContent } from '~/shared/data/pages/content.data';
+import { silverContent } from '~/shared/data/pages/content.data';
 
 export const metadata: Metadata = {
-  title: 'Eighties',
+  title: 'Silver',
 };
 
 const Page = () => {
   return (
     <>
-      <Content {...sudaniContent} />
+      <Content {...silverContent} />
     </>
   );
 };

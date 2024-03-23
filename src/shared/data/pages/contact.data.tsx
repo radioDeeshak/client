@@ -21,13 +21,8 @@ export const contactContent: ContactProps = {
   },
   items: [
     {
-      title: 'Our Address',
-      description: ['1230 Maecenas Street Donec Road', 'New York, EEUU'],
-      icon: IconMapPin,
-    },
-    {
       title: 'Contact',
-      description: ['Mobile: +1 (123) 456-7890', 'Mail: contact@deeshak.com'],
+      description: ['Mobile: +1 (123) 456-7890', 'Email: info@deeshak.com'],
       icon: IconPhoneCall,
     },
   ],

@@ -1,6 +1,7 @@
 import { twMerge } from 'tailwind-merge';
 import type { ItemGrid as ItemGridType } from '~/shared/types';
 import CTA from './CTA';
+import Image from 'next/image';
 
 const ItemGrid = ({
   id,
@@ -14,7 +15,8 @@ const ItemGrid = ({
   titleClass,
   descriptionClass,
   actionClass,
-}: ItemGridType) => {
+  isImageDisplayed, // Add isImageDisplayed prop
+}: ItemGridType & { isImageDisplayed?: boolean }) => {
   return (
     <>
       {items && (
@@ -32,17 +34,27 @@ const ItemGrid = ({
             containerClass,
           )}
         >
-          {items.map(({ title, description, icon: Icon, callToAction }, index) => (
+          {items.map(({ title, description, icon: Icon, callToAction, image }, index) => (
             <div key={id ? `item-${id}-${index}` : `item-grid-${index}`}>
               <div className={(twMerge('flex flex-row max-w-md'), panelClass)}>
-                <div className="flex justify-center">
-                  {Icon ? (
-                    <Icon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
-                  ) : DefaultIcon ? (
-                    <DefaultIcon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
-                  ) : null}
-                </div>
+                {isImageDisplayed && image && (
+                  <div className="flex justify-center">
+                    <Image
+                      className="w-300 h-300 rounded-lg shadow-lg bg-gray-400 dark:bg-slate-700 transition-transform transform-gpu hover:scale-105 duration-500"
+                      src={image.src}
+                      alt={image.alt}
+                      quality={50}
+                    />
+                  </div>
+                )}
                 <div className="mt-0.5">
+                  <div className="flex justify-center">
+                    {Icon ? (
+                      <Icon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
+                    ) : DefaultIcon ? (
+                      <DefaultIcon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
+                    ) : null}
+                  </div>
                   {title && <h3 className={twMerge('text-xl font-bold', titleClass)}>{title}</h3>}
                   {description && (
                     <p

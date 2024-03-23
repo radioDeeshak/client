@@ -3,7 +3,6 @@ import { ReactElement } from 'react';
 
 type Widget = {
   id?: string;
-  /** Does it have a background? */
   hasBackground?: boolean;
 };
 
@@ -40,11 +39,19 @@ type CallToActionType = {
   targetBlank?: boolean;
 };
 
-type Play = {
-  callToAction: CallToActionType;
-  containerClass?: string;
+type PlayProps = {
   audioSrc: string;
   audioType: string;
+};
+
+type GalleryProps = Widget & {
+  header?: Header;
+  items?: Array<Item>;
+  columns?: 1 | 2 | 3;
+  isImageDisplayed?: boolean;
+  image?: Image;
+  isBeforeContent?: boolean;
+  isAfterContent?: boolean;
 };
 
 type LinkOrButton = {
@@ -118,6 +125,7 @@ type Item = {
   href?: string;
   form?: SmallForm;
   icon?: Icon;
+  image?: Image;
   callToAction?: CallToActionType;
 };
 
@@ -133,6 +141,7 @@ type ItemGrid = {
   titleClass?: string;
   descriptionClass?: string;
   actionClass?: string;
+  isImageDisplayed?: boolean;
 };
 
 type Timeline = {
@@ -146,56 +155,11 @@ type Timeline = {
   descriptionClass?: string;
 };
 
-type Team = {
-  name: string;
-  occupation: string;
-  image: Image;
-  items?: Array<Item>;
-  containerClass?: string;
-  imageClass?: string;
-  panelClass?: string;
-  nameClass?: string;
-  occupationClass?: string;
-  itemsClass?: string;
-};
-
-type Testimonial = {
-  testimonial?: string;
-  startSlice?: number;
-  endSlice?: number;
-  isTestimonialUp?: boolean;
-  hasDividerLine?: boolean;
-  name?: string;
-  job?: string;
-  image?: Image;
-  href?: string;
-  containerClass?: string;
-  panelClass?: string;
-  imageClass?: string;
-  dataClass?: string;
-  nameJobClass?: string;
-  nameClass?: string;
-  jobClass?: string;
-  testimonialClass?: string;
-};
-
 type Link = {
   label?: string;
   href?: string;
   ariaLabel?: string;
   icon?: Icon;
-};
-
-type Price = {
-  title?: string;
-  subtitle?: string;
-  description?: string;
-  price?: number;
-  period?: string;
-  items?: Array<Item>;
-  callToAction?: CallToActionType;
-  hasRibbon?: boolean;
-  ribbonTitle?: string;
 };
 
 type Column = {
@@ -246,14 +210,6 @@ type HeroProps = Widget &  {
   image?: Image;
 };
 
-type FAQsProps = Widget & {
-  header?: Header;
-  items?: Array<Item>;
-  columns?: number;
-  tabs?: Array<Tab>;
-  callToAction?: CallToActionType;
-};
-
 type CollapseProps = {
   items: Array<Item>;
   classCollapseItem?: string;
@@ -266,13 +222,6 @@ type CallToActionProps = Widget & {
   subtitle: string;
   callToAction?: CallToActionType;
   items?: Array<Item>;
-};
-
-type PlayProps = {
-  callToAction: CallToActionType;
-  containerClass?: string;
-  audioSrc: string;
-  audioType: string;
 };
 
 type GenreProps = Widget & {
@@ -292,6 +241,7 @@ type ContentProps = Widget & {
   image?: Image;
   isReversed?: boolean;
   isAfterContent?: boolean;
+  audioSrc?: string;
 };
 
 type StepsProps = Widget & {

@@ -39,7 +39,7 @@ export const genresContent: GenreProps = {
     },
     {
       title: 'ديشاك حقيبة',
-      description: 'أغاني خالدة من عصر الأربعينيات الخمسينيات والستينيات',
+      description: 'أغاني خالدة من الأربعينيات الخمسينيات والستينيات',
       icon: IconBriefcase,
       callToAction: {
         text: 'أسمع',
@@ -48,11 +48,11 @@ export const genresContent: GenreProps = {
     },
     {
       title: 'ديشاك سودان',
-      description: 'رحلة ساحرة إلى تراث السودان',
+      description: 'رحلة ساحرة إلى أرض الخير',
       icon: IconPyramid,
       callToAction: {
         text: 'أسمع',
-        href: '/genres/sudani',
+        href: '/genres/sudan',
       },
     },
     {
@@ -66,20 +66,20 @@ export const genresContent: GenreProps = {
     },
     {
       title: 'ديشاك برونزي',
-      description: 'أغاني خالدة من عصر التسعينيات',
+      description: 'أغاني خالدة من التسعينيات',
       icon: IconPlant,
       callToAction: {
         text: 'قريباً',
-        href: '/genres/youth',
+        href: '/genres/bronze',
       },
     },
     {
       title: 'ديشاك فضي',
-      description: 'أغاني خالدة من عصر السبعينيات والثمانينيات',
+      description: 'أغاني خالدة من السبعينيات والثمانينيات',
       icon: IconDeviceAudioTape,
       callToAction: {
         text: 'قريباً',
-        href: '/genres/eighties',
+        href: '/genres/silver',
       },
     },
   ],

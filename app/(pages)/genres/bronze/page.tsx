@@ -1,15 +1,15 @@
 import { Metadata } from 'next';
 import Content from '~/components/widgets/Content';
-import { eightiesContent } from '~/shared/data/pages/content.data';
+import { bronzeContent } from '~/shared/data/pages/content.data';
 
 export const metadata: Metadata = {
-  title: 'Eighties',
+  title: 'Bronze',
 };
 
 const Page = () => {
   return (
     <>
-      <Content {...eightiesContent} />
+      <Content {...bronzeContent} />
     </>
   );
 };

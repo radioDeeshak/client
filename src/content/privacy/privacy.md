@@ -7,6 +7,6 @@ This Privacy Policy outlines how we collect, use, and disclose your personal inf
 - **Information Sharing:** We do not sell your data; it may be shared with trusted third parties for site operation.
 - **Data Security:** We take measures to protect your information but cannot guarantee absolute security.
 - **Changes:** We may update this policy; any changes will be effective immediately.
-- **Contact:** For questions, contact us at [contact@deeshak.com](mailto:contact@deeshak.com).
+- **Contact:** For questions, contact us at [info@deeshak.com](mailto:info@deeshak.com).
 
 By using our website, you consent to this Privacy Policy.

@@ -1,4 +1,4 @@
-import { IconBrandFacebook, IconBrandInstagram, IconBrandTwitter } from '@tabler/icons-react';
+import { IconBrandFacebook, IconBrandInstagram, IconBrandTwitter, IconBrandWhatsapp } from '@tabler/icons-react';
 import { HeaderProps, FooterProps } from '../types';
 
 export const headerData: HeaderProps = {
@@ -12,7 +12,11 @@ export const headerData: HeaderProps = {
       href: '/about',
     },
     {
-      label: 'تيارات',
+      label: 'المعرض',
+      href: '/gallery',
+    },
+    {
+      label: 'التيارات',
       href: '/genres',
     },
     {
@@ -31,24 +35,25 @@ export const headerData: HeaderProps = {
 export const footerData: FooterProps = {
   links: [
     {
-      label: `All Rights Reserved © ${new Date().getFullYear()} · Deeshak Radio`,
+      label: `All Rights Reserved © ${new Date().getFullYear()} · Radio Deeshak`,
       href: '/terms',
     },
   ],
   columns: [
     {
       title: 'Phone',
-      texts: ['Office: 1-810-399-3576'],
+      texts: ['Office: +1-810-399-3576'],
     },
     {
       title: 'Email',
-      texts: ['Contact: contact@deeshak.com'],
+      texts: ['Info: info@deeshak.com'],
     },
   ],
   socials: [
     { label: 'Twitter', icon: IconBrandTwitter, href: 'https://twitter.com/radiodeeshak' },
     { label: 'Instagram', icon: IconBrandInstagram, href: 'https://instagram.com/radiodeeshak' },
     { label: 'Facebook', icon: IconBrandFacebook, href: 'https://facebook.com/radiodeeshak' },
+    { label: 'Whatsapp', icon: IconBrandWhatsapp, href: 'https://wa.me/8103993576' },
   ],
   footNote: (
     <div className="mr-4 text-sm dark:text-zinc-400">

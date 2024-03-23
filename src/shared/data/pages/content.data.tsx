@@ -1,22 +1,6 @@
-import { CallToActionProps, ContentProps } from '~/shared/types';
+import { ContentProps } from '~/shared/types';
 
 import heroImg from '~/assets/images/logo.jpg';
-
-export const eightiesContent: ContentProps = {
-  id: 'eightiesContent',
-  hasBackground: false,
-  header: {
-    title: 'ديشاك فضي',
-    subtitle: 'لحظات ملهمة من عصر الثمانينيات، حيث يعزف الإيقاع بألحانه المثيرة وطاقته المتفجرة',
-    tagline: 'Content',
-  },
-  image: {
-    src: heroImg,
-    alt: 'Colorful Image',
-  },
-  isReversed: false,
-  isAfterContent: false,
-};
 
 // goldContent
 export const goldContent: ContentProps = {
@@ -24,7 +8,7 @@ export const goldContent: ContentProps = {
   hasBackground: false,
   header: {
     title: 'ديشاك ذهبي',
-    subtitle: 'الكلاسيكيات الذهبية في الموسيقى السودانية، تسلط الضوء على الأغاني الخالدة والألحان الرائعة',
+    subtitle: 'أغنيات خالدة من العصر الذهبي',
     tagline: 'Content',
   },
   image: {
@@ -33,6 +17,7 @@ export const goldContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
+  // audioSrc: 'https://secure1.reliastream.com/deeshak/;stream.nsv',
 };
 
 // haqibaContent
@@ -41,7 +26,7 @@ export const haqibaContent: ContentProps = {
   hasBackground: false,
   header: {
     title: 'ديشاك حقيبة',
-    subtitle: 'موسيقى الحقيبة تأخذك في رحلة موسيقية متنوعة ومتجددة، تتنوع بين الأصوات والألحان',
+    subtitle: 'أغاني خالدة من الأربعينيات الخمسينيات والستينيات',
     tagline: 'Content',
   },
   image: {
@@ -50,6 +35,7 @@ export const haqibaContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
+  audioSrc: 'https://s9.reliastream.com/proxy/osman?mp=/stream',
 };
 
 // rapContent
@@ -67,15 +53,33 @@ export const rapContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
+  // audioSrc: 'https://secure1.reliastream.com/deeshak/;stream.nsv',
 };
 
-// sudaniContent
-export const sudaniContent: ContentProps = {
-  id: 'sudaniContent',
+export const silverContent: ContentProps = {
+  id: 'silverContent',
+  hasBackground: false,
+  header: {
+    title: 'ديشاك فضي',
+    subtitle: 'أغاني خالدة من السبعينيات والثمانينيات',
+    tagline: 'Content',
+  },
+  image: {
+    src: heroImg,
+    alt: 'Colorful Image',
+  },
+  isReversed: false,
+  isAfterContent: false,
+  // audioSrc: 'https://secure1.reliastream.com/deeshak/;stream.nsv',
+};
+
+// sudanContent
+export const sudanContent: ContentProps = {
+  id: 'sudanContent',
   hasBackground: false,
   header: {
     title: 'ديشاك سودان',
-    subtitle: 'رحلة ساحرة إلى تراث السودان، حيث يتألق الإيقاع التقليدي بألوانه الغنية وأصواته العذبة',
+    subtitle: 'رحلة ساحرة إلى أرض الخير',
     tagline: 'Content',
   },
   image: {
@@ -84,15 +88,16 @@ export const sudaniContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
+  audioSrc: 'https://secure1.reliastream.com/deeshak/;stream.nsv',
 };
 
-// youthContent
-export const youthContent: ContentProps = {
-  id: 'youthContent',
+// bronzeContent
+export const bronzeContent: ContentProps = {
+  id: 'bronzeContent',
   hasBackground: false,
   header: {
     title: 'ديشاك برونزي',
-    subtitle: 'تناغم الأصوات الحديثة والإيقاعات النابضة بالحياة، تحفل هذه الموسيقى بالشغف والطاقة البرونزيية.',
+    subtitle: 'أغاني خالدة من التسعينيات',
     tagline: 'Content',
   },
   image: {
@@ -101,4 +106,6 @@ export const youthContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
+  audioSrc: '',
+  // audioSrc: 'https://secure1.reliastream.com/deeshak/;stream.nsv',
 };

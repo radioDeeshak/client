@@ -60,11 +60,11 @@ export const homeGenres: GenreProps = {
     },
     {
       title: 'ديشاك سودان',
-      description: 'رحلة ساحرة إلى تراث السودان',
+      description: 'رحلة ساحرة إلى أرض الخير',
       icon: IconPyramid,
       callToAction: {
         text: 'أسمع',
-        href: '/genres/sudani',
+        href: '/genres/sudan',
       },
     },
     {
@@ -82,7 +82,7 @@ export const homeGenres: GenreProps = {
       icon: IconPlant,
       callToAction: {
         text: 'قريباً',
-        href: '/genres/youth',
+        href: '/genres/bronze',
       },
     },
     {
@@ -91,7 +91,7 @@ export const homeGenres: GenreProps = {
       icon: IconDeviceAudioTape,
       callToAction: {
         text: 'قريباً',
-        href: '/genres/eighties',
+        href: '/genres/silver',
       },
     },
   ],

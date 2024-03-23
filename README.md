@@ -14,4 +14,4 @@ Radio Dishaak is the first Sudanese radio station on the internet, catering to S
 
 ## Contact
 
-If you have any questions or suggestions, please feel free to contact us at <contact@deeshak.com>.
+If you have any questions or suggestions, please feel free to contact us at <info@deeshak.com>.

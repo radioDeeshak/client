@@ -2,15 +2,17 @@
 
 import React, { useState, useEffect } from 'react';
 import { IconPlayerPlayFilled, IconPlayerPauseFilled } from '@tabler/icons-react';
+import { PlayProps } from '../../shared/types';
 
-const Play = () => {
+const Play = ({ audioSrc, audioType }: PlayProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
-  const audioUrl = 'https://secure1.reliastream.com/deeshak/;stream.nsv';
 
   useEffect(() => {
-    setAudio(new Audio(audioUrl));
-  }, []);
+    if (audioSrc) {
+      setAudio(new Audio(audioSrc));
+    }
+  }, [audioSrc]);
 
   const handlePlayPause = () => {
     if (audio) {
@@ -37,15 +39,18 @@ const Play = () => {
     setIsPlaying(false);
   };
 
+  // Conditionally render the button based on audioSrc existence
   return (
     <div className="mx-auto max-w-3xl">
-      <button onClick={handlePlayPause} className="btn btn-primary flex items-center justify-center">
-        {isPlaying ? (
-          <IconPlayerPauseFilled size={18} color="white" />
-        ) : (
-          <IconPlayerPlayFilled size={18} color="white" />
-        )}
-      </button>
+      {audioSrc && (
+        <button onClick={handlePlayPause} className="btn btn-primary flex items-center justify-center">
+          {isPlaying ? (
+            <IconPlayerPauseFilled size={18} color="white" />
+          ) : (
+            <IconPlayerPlayFilled size={18} color="white" />
+          )}
+        </button>
+      )}
     </div>
   );
 };

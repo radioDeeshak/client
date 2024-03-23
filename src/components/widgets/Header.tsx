@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { IconRss } from '@tabler/icons-react';
 import ToggleDarkMode from '~/components/atoms/ToggleDarkMode';
 import Link from 'next/link';
@@ -14,11 +14,13 @@ import { useMediaQuery } from '@react-hook/media-query';
 const Header = () => {
   const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
   const isMobile = useMediaQuery('only screen and (max-width: 768px)');
-  const [selectedItem, setSelectedItem] = useState<number>(3);
+  const initialSelectedItem = isMobile ? 0 : 4;
+  // eslint-disable-next-line
+  const [selectedItem, setSelectedItem] = useState<number>(initialSelectedItem);
 
-  const handleListItemClick = (index: number) => {
-    setSelectedItem(index);
-  };
+  useEffect(() => {
+    setSelectedItem(isMobile ? 0 : 4);
+  }, [isMobile]);
 
   const updatedIsDropdownOpen =
     links &&
@@ -88,7 +90,9 @@ const Header = () => {
               (isMobile ? links.slice().reverse() : links).map(({ label, href, icon: Icon, links }, index) => (
                 <li
                   key={`item-link-${index}`}
-                  className={links?.length ? 'dropdown' : 'dark:hover:bg-gray-700 md:hover:bg-gray-200 block rounded'}
+                  className={
+                    links?.length ? 'dropdown' : 'dark:hover:bg-gray-700 md:hover:bg-gray-200 block rounded-t-lg'
+                  }
                 >
                   {links && links.length ? (
                     <>
