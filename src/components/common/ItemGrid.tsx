@@ -49,11 +49,23 @@ const ItemGrid = ({
                 )}
                 <div className="mt-0.5">
                   <div className="flex justify-center">
-                    {Icon ? (
-                      <Icon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
-                    ) : DefaultIcon ? (
-                      <DefaultIcon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
-                    ) : null}
+                    {callToAction && callToAction.href ? (
+                      <a href={callToAction.href} className="cursor-pointer" rel="noopener noreferrer">
+                        {Icon ? (
+                          <Icon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
+                        ) : DefaultIcon ? (
+                          <DefaultIcon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
+                        ) : null}
+                      </a>
+                    ) : (
+                      <>
+                        {Icon ? (
+                          <Icon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
+                        ) : DefaultIcon ? (
+                          <DefaultIcon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
+                        ) : null}
+                      </>
+                    )}
                   </div>
                   {title && <h3 className={twMerge('text-xl font-bold', titleClass)}>{title}</h3>}
                   {description && (

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { IconRss } from '@tabler/icons-react';
 import ToggleDarkMode from '~/components/atoms/ToggleDarkMode';
 import Link from 'next/link';
@@ -15,12 +15,11 @@ const Header = () => {
   const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
   const isMobile = useMediaQuery('only screen and (max-width: 768px)');
   const initialSelectedItem = isMobile ? 0 : 4;
-  // eslint-disable-next-line
   const [selectedItem, setSelectedItem] = useState<number>(initialSelectedItem);
 
-  useEffect(() => {
-    setSelectedItem(isMobile ? 0 : 4);
-  }, [isMobile]);
+  const handleListItemClick = (index: number) => {
+    setSelectedItem(index);
+  };
 
   const updatedIsDropdownOpen =
     links &&
