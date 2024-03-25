@@ -47,7 +47,9 @@ const Footer = () => {
             links.map(({ label, href }, index) => (
               <li key={`item-link-${index}`}>
                 <a
-                  className="duration-150 ease-in-out placeholder:transition hover:text-gray-700 hover:underline dark:text-gray-400"
+                  className={`duration-150 ease-in-out placeholder:transition hover:text-gray-700 ${
+                    href ? 'hover:underline' : ''
+                  } dark:text-gray-400`}
                   aria-label={label}
                   href={href}
                 >

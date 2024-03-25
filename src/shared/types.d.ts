@@ -16,6 +16,22 @@ type BackgroundProps = {
   hasBackground?: boolean;
 };
 
+type PlayProps = {
+  audioSrc: string;
+  audioType: string;
+  localStorageKey: string;
+};
+
+type ContentProps  = Widget & {
+  header?: Header;
+  content?: string;
+  items?: Array<Item>;
+  image?: Image;
+  isReversed?: boolean;
+  isAfterContent?: boolean;
+  audioSrc?: string;
+};
+
 type Header = {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
@@ -37,11 +53,6 @@ type CallToActionType = {
   href: string;
   icon?: Icon;
   targetBlank?: boolean;
-};
-
-type PlayProps = {
-  audioSrc: string;
-  audioType: string;
 };
 
 type GalleryProps = Widget & {
@@ -234,16 +245,6 @@ type GenreProps = Widget & {
   isAfterContent?: boolean;
 };
 
-type ContentProps = Widget & {
-  header?: Header;
-  content?: string;
-  items?: Array<Item>;
-  image?: Image;
-  isReversed?: boolean;
-  isAfterContent?: boolean;
-  audioSrc?: string;
-};
-
 type StepsProps = Widget & {
   header?: Header;
   items: Array<Item>;
@@ -293,4 +294,5 @@ type HeaderProps = {
   showToggleTheme?: boolean;
   showRssFeed?: boolean;
   position?: 'center' | 'right' | 'left';
+  audioSrc?: string;
 };

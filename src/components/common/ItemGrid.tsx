@@ -15,7 +15,7 @@ const ItemGrid = ({
   titleClass,
   descriptionClass,
   actionClass,
-  isImageDisplayed, // Add isImageDisplayed prop
+  isImageDisplayed,
 }: ItemGridType & { isImageDisplayed?: boolean }) => {
   return (
     <>
@@ -51,11 +51,18 @@ const ItemGrid = ({
                   <div className="flex justify-center">
                     {callToAction && callToAction.href ? (
                       <a href={callToAction.href} className="cursor-pointer" rel="noopener noreferrer">
-                        {Icon ? (
-                          <Icon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
-                        ) : DefaultIcon ? (
-                          <DefaultIcon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
-                        ) : null}
+                        {image && (
+                          <div className="flex justify-center m-2">
+                            <Image
+                              className="w-300 h-300 rounded-lg shadow-lg bg-gray-400 dark:bg-slate-700 transition-transform transform-gpu hover:scale-105 duration-500"
+                              src={image.src}
+                              alt={image.alt}
+                              quality={50}
+                              width={300}
+                              height={300}
+                            />
+                          </div>
+                        )}
                       </a>
                     ) : (
                       <>

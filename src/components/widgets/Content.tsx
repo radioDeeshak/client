@@ -13,7 +13,7 @@ const Content = ({ header, image, isAfterContent, id, hasBackground = false, aud
     {image && (
       <div className="relative m-auto max-w-4xl flex justify-center">
         <Image
-          className="w-48 h-48 rounded-lg shadow-lg bg-gray-400 dark:bg-slate-700"
+          className="w-72 h-60 rounded-lg shadow-lg bg-gray-400 dark:bg-slate-700"
           src={image.src}
           alt={image.alt}
           quality={50}
@@ -25,7 +25,7 @@ const Content = ({ header, image, isAfterContent, id, hasBackground = false, aud
     </div>
     <div className="flex justify-center">
       {audioSrc ? (
-        <Play audioSrc={audioSrc} audioType="audio/mpeg" />
+        <Play audioSrc={audioSrc} audioType="audio/mpeg" localStorageKey={''} />
       ) : (
         <div role="status">
           <svg

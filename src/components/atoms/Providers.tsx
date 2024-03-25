@@ -1,14 +1,16 @@
 'use client';
 
 import { ThemeProvider } from 'next-themes';
+import React, { ReactNode } from 'react';
+import { PlayerProvider } from '~/shared/context/PlayContext';
 
 export interface ProvidersProps {
-  children: React.ReactNode
+  children: ReactNode;
 }
 
 const Providers = ({ children }: ProvidersProps) => (
   <ThemeProvider attribute="class" disableTransitionOnChange>
-    {children}
+    <PlayerProvider>{children}</PlayerProvider>
   </ThemeProvider>
 );
 

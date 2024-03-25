@@ -21,7 +21,7 @@ const Gallery = ({
     containerClass={`${isBeforeContent ? 'py-0 md:py-0 lg:py-0 pb-12 md:pb-16 lg:pb-20' : ''}`}
   >
     {header && <Headline header={header} titleClass="text-3xl sm:text-5xl text-primary-500 dark:text-primary-500" />}
-    {image && (
+    {image && isImageDisplayed && (
       <div className="relative m-auto max-w-4xl flex justify-center">
         {' '}
         <Image

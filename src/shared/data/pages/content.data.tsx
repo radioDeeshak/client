@@ -1,6 +1,10 @@
+import bronzePoster from '~/assets/images/posters/poster6.jpg';
+import goldPoster from '~/assets/images/posters/poster5.jpg';
+import haqibaPoster from '~/assets/images/posters/poster4.jpg';
+import rapPoster from '~/assets/images/posters/poster3.jpg';
+import silverPoster from '~/assets/images/posters/poster2.jpg';
+import sudanPoster from '~/assets/images/posters/poster.jpg';
 import { ContentProps } from '~/shared/types';
-
-import heroImg from '~/assets/images/logo.jpg';
 
 // goldContent
 export const goldContent: ContentProps = {
@@ -9,11 +13,11 @@ export const goldContent: ContentProps = {
   header: {
     title: 'ديشاك ذهبي',
     subtitle: 'أغنيات خالدة من العصر الذهبي',
-    tagline: 'Content',
+    tagline: 'Deeshak Gold Content',
   },
   image: {
-    src: heroImg,
-    alt: 'Colorful Image',
+    src: goldPoster,
+    alt: 'Deeshak Gold Image',
   },
   isReversed: false,
   isAfterContent: false,
@@ -26,12 +30,12 @@ export const haqibaContent: ContentProps = {
   hasBackground: false,
   header: {
     title: 'ديشاك حقيبة',
-    subtitle: 'أغاني خالدة من الأربعينيات الخمسينيات والستينيات',
-    tagline: 'Content',
+    subtitle: 'أغاني خالدة من الأربعينيات والخمسينيات والستينيات',
+    tagline: 'Deeshak Haqiba Content',
   },
   image: {
-    src: heroImg,
-    alt: 'Colorful Image',
+    src: haqibaPoster,
+    alt: 'Deeshak Haqiba Image',
   },
   isReversed: false,
   isAfterContent: false,
@@ -45,11 +49,11 @@ export const rapContent: ContentProps = {
   header: {
     title: 'ديشاك الراب',
     subtitle: 'ديشاك راب يجلب لكم أفضل ما في ساحة الراب السودانية.',
-    tagline: 'Content',
+    tagline: 'Deeshak Rap Content',
   },
   image: {
-    src: heroImg,
-    alt: 'Colorful Image',
+    src: rapPoster,
+    alt: 'Deeshak Rap Image',
   },
   isReversed: false,
   isAfterContent: false,
@@ -62,11 +66,11 @@ export const silverContent: ContentProps = {
   header: {
     title: 'ديشاك فضي',
     subtitle: 'أغاني خالدة من السبعينيات والثمانينيات',
-    tagline: 'Content',
+    tagline: 'Deeshak Silver Content',
   },
   image: {
-    src: heroImg,
-    alt: 'Colorful Image',
+    src: silverPoster,
+    alt: 'Deeshak Silver Image',
   },
   isReversed: false,
   isAfterContent: false,
@@ -80,11 +84,11 @@ export const sudanContent: ContentProps = {
   header: {
     title: 'ديشاك سودان',
     subtitle: 'رحلة ساحرة إلى أرض الخير',
-    tagline: 'Content',
+    tagline: 'Deeshak Sudan Content',
   },
   image: {
-    src: heroImg,
-    alt: 'Colorful Image',
+    src: sudanPoster,
+    alt: 'Deeshak Sudan Image',
   },
   isReversed: false,
   isAfterContent: false,
@@ -98,11 +102,11 @@ export const bronzeContent: ContentProps = {
   header: {
     title: 'ديشاك برونزي',
     subtitle: 'أغاني خالدة من التسعينيات',
-    tagline: 'Content',
+    tagline: 'Deeshak Bronze Content',
   },
   image: {
-    src: heroImg,
-    alt: 'Colorful Image',
+    src: bronzePoster,
+    alt: 'Deeshak Bronze Image',
   },
   isReversed: false,
   isAfterContent: false,

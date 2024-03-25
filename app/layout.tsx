@@ -5,6 +5,7 @@ import { SITE } from '~/config.js';
 import Providers from '~/components/atoms/Providers';
 import Header from '~/components/widgets/Header';
 import Footer from '~/components/widgets/Footer';
+import FloatingPlayButton from '~/components/widgets/FloatingPlayButton';
 
 import { Noto_Naskh_Arabic as CustomFont } from 'next/font/google';
 import '~/assets/styles/base.css';
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: LayoutProps) {
         <Providers>
           <Header />
           <main>{children}</main>
+          <FloatingPlayButton />
           <Footer />
         </Providers>
       </body>

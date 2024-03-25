@@ -36,7 +36,6 @@ export const footerData: FooterProps = {
   links: [
     {
       label: `All Rights Reserved © ${new Date().getFullYear()} · Radio Deeshak`,
-      href: '/terms',
     },
   ],
   columns: [
