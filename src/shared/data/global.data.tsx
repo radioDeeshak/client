@@ -59,7 +59,7 @@ export const footerData: FooterProps = {
       <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
       <span className="text-xs">
         Powered by{' '}
-        <a className="text-orange-600 hover:underline dark:text-gray-200" href="https://amsik.io/">
+        <a className="text-orange-600 hover:underline dark:text-gray-200" href="https://github.com/radioDeeshak/client">
           {' '}
           Amsik Development Studio
         </a>
