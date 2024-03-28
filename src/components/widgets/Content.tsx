@@ -1,10 +1,12 @@
+// components/common/Content.tsx
+import React from 'react';
 import Image from 'next/image';
 import { ContentProps } from '~/shared/types';
 import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 import Play from '~/components/widgets/Play';
 
-const Content = ({ header, image, isAfterContent, id, hasBackground = false, audioSrc }: ContentProps) => (
+const Content = ({ header, image, isAfterContent, id, hasBackground = false, audioSrc, audioList }: ContentProps) => (
   <WidgetWrapper
     id={id ? id : ''}
     hasBackground={!hasBackground}
@@ -25,7 +27,7 @@ const Content = ({ header, image, isAfterContent, id, hasBackground = false, aud
     </div>
     <div className="flex justify-center">
       {audioSrc ? (
-        <Play audioSrc={audioSrc} audioType="audio/mpeg" localStorageKey={''} />
+        <Play audioSrc={audioSrc} audioList={audioList || []} localStorageKey={''} audioType={''} />
       ) : (
         <div role="status">
           <svg

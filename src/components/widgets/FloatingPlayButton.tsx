@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { IconPlayerPlayFilled, IconPlayerPauseFilled } from '@tabler/icons-react';
+import { IconPlayerPlayFilled, IconPlayerPauseFilled, IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 import { usePlayer } from '~/shared/context/PlayContext';
 
 const FloatingPlayButton = () => {
-  const { isPlaying, togglePlay } = usePlayer();
+  const { isPlaying, togglePlay, currentAudioSrc } = usePlayer();
   const [isVisible, setIsVisible] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -17,6 +17,12 @@ const FloatingPlayButton = () => {
     togglePlay();
     setIsClicked(true);
     setIsVisible(true);
+  };
+
+  const handlePause = () => {
+    if (isPlaying) {
+      togglePlay();
+    }
   };
 
   return (
@@ -41,7 +47,7 @@ const FloatingPlayButton = () => {
       }}
     >
       <button
-        onClick={handlePlayPause}
+        onClick={currentAudioSrc ? handlePause : handlePlayPause}
         style={{
           border: 'none',
           background: 'transparent',

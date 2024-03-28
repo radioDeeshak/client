@@ -1,4 +1,4 @@
-import { GenreProps, HeroProps, StepsProps } from '~/shared/types';
+import { StreamProps, HeroProps, StepsProps } from '~/shared/types';
 import hero2Img from '~/assets/images/hero2.jpg';
 import { IconAward, IconNumber1, IconNumber2, IconNumber3, IconNumber4, IconNumber5 } from '@tabler/icons-react';
 
@@ -12,12 +12,12 @@ export const aboutHero: HeroProps = {
   },
   image: {
     src: hero2Img,
-    alt: 'Hero Radio Deeshak!',
+    alt: 'Hero Image',
   },
 };
 
-export const mission: GenreProps = {
-  id: 'genres-four-on-about',
+export const mission: StreamProps = {
+  id: 'streams-four-on-about',
   hasBackground: false,
   header: {
     title: 'Our mission',
@@ -27,8 +27,8 @@ export const mission: GenreProps = {
   },
 };
 
-export const vision: GenreProps = {
-  id: 'genres-four-on-about-two',
+export const vision: StreamProps = {
+  id: 'streams-four-on-about-two',
   hasBackground: false,
   header: {
     title: 'Our vision',
@@ -83,8 +83,8 @@ export const steps: StepsProps = {
   ],
 };
 
-export const record: GenreProps = {
-  id: 'genres-on-about',
+export const record: StreamProps = {
+  id: 'streams-on-about',
   hasBackground: true,
   header: {
     title: 'Our record of excellence',

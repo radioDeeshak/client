@@ -22,7 +22,7 @@ export const contactContent: ContactProps = {
   items: [
     {
       title: 'Contact',
-      description: ['Mobile: +1 (123) 456-7890', 'Email: info@deeshak.com'],
+      description: ['Mobile: +1 (123) 456-7890', 'Email: contact@deeshak.com'],
       icon: IconPhoneCall,
     },
   ],

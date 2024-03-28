@@ -1,4 +1,4 @@
-import heroImg from '~/assets/images/posters/poster3.jpg';
+import heroImg from '~/assets/images/gallery/studio4.jpg';
 import bronzePoster from '~/assets/images/posters/poster6.jpg';
 import goldPoster from '~/assets/images/posters/poster5.jpg';
 import haqibaPoster from '~/assets/images/posters/poster4.jpg';
@@ -6,26 +6,45 @@ import rapPoster from '~/assets/images/posters/poster3.jpg';
 import silverPoster from '~/assets/images/posters/poster2.jpg';
 import sudanPoster from '~/assets/images/posters/poster.jpg';
 
-import { ContentProps, GenreProps, HeroProps } from '../../types';
+import studioPic1 from '~/assets/images/gallery/studio1.jpg';
+import studioPic2 from '~/assets/images/gallery/studio2.jpg';
+import studioPic3 from '~/assets/images/gallery/studio3.jpg';
+import studioPic4 from '~/assets/images/gallery/studio4.jpg';
+import studioPic5 from '~/assets/images/gallery/studio5.jpg';
+import studioPic6 from '~/assets/images/gallery/studio6.jpg';
+import studioPic7 from '~/assets/images/gallery/studio7.jpg';
+import studioPic8 from '~/assets/images/gallery/studio8.jpg';
+import studioPic9 from '~/assets/images/gallery/studio9.jpg';
+import studioPic10 from '~/assets/images/gallery/studio10.jpg';
+import studioPic11 from '~/assets/images/gallery/studio11.jpg';
+import studioPic12 from '~/assets/images/gallery/studio12.jpg';
+import studioPic13 from '~/assets/images/gallery/studio13.jpg';
+import studioPic14 from '~/assets/images/gallery/studio14.jpg';
+import studioPic15 from '~/assets/images/gallery/studio15.jpg';
+import studioPic16 from '~/assets/images/gallery/studio16.jpg';
+import studioPic17 from '~/assets/images/gallery/studio17.jpg';
+import studioPic18 from '~/assets/images/gallery/studio18.jpg';
+import studioPic19 from '~/assets/images/gallery/studio19.jpg';
+import studioPic20 from '~/assets/images/gallery/studio20.jpg';
+import studioPic21 from '~/assets/images/gallery/studio21.jpg';
+import studioPic22 from '~/assets/images/gallery/studio22.jpg';
+import studioPic23 from '~/assets/images/gallery/studio23.jpg';
+import studioPic24 from '~/assets/images/gallery/studio24.jpg';
+import studioPic25 from '~/assets/images/gallery/studio25.jpg';
+import studioPic26 from '~/assets/images/gallery/studio26.jpg';
+import studioPic27 from '~/assets/images/gallery/studio27.jpg';
+import studioPic28 from '~/assets/images/gallery/studio28.jpg';
+import studioPic29 from '~/assets/images/gallery/studio29.jpg';
+import studioPic30 from '~/assets/images/gallery/studio30.jpg';
+import studioPic31 from '~/assets/images/gallery/studio31.jpg';
+import studioPic32 from '~/assets/images/gallery/studio32.jpg';
+import studioPic33 from '~/assets/images/gallery/studio33.jpg';
+import studioPic34 from '~/assets/images/gallery/studio34.jpg';
 
-export const homeHero: HeroProps = {
-  title: <>مجموعة راديو ديشاك</>,
-  subtitle: (
-    <>
-      <span className="hidden md:inline">
-        <span className="font-semibold underline decoration-primary-600 decoration-wavy decoration-1 underline-offset-2"></span>{' '}
-        راديو المهاجر والمغترب السوداني
-      </span>{' '}
-    </>
-  ),
-  image: {
-    src: heroImg,
-    alt: 'Hero Radio Deeshak!',
-  },
-};
+import { StreamProps, HeroProps, SocialMediaProps } from '../../types';
 
-export const homeGenres: GenreProps = {
-  id: 'genres-on-home',
+export const homeStreams: StreamProps = {
+  id: 'streams-on-home',
   hasBackground: false,
   columns: 3,
   header: {
@@ -35,7 +54,7 @@ export const homeGenres: GenreProps = {
       </>
     ),
     subtitle: 'استمتع بأفضل الموسيقى السودانية واستكشف عالم الإيقاعات والألحان الساحرة',
-    tagline: 'Genres',
+    tagline: 'Streams',
   },
   items: [
     {
@@ -47,7 +66,7 @@ export const homeGenres: GenreProps = {
       },
       callToAction: {
         text: 'قريباً',
-        href: '/genres/gold',
+        href: '/streams/gold',
       },
     },
     {
@@ -59,7 +78,7 @@ export const homeGenres: GenreProps = {
       },
       callToAction: {
         text: 'أسمع',
-        href: '/genres/haqiba',
+        href: '/streams/haqiba',
       },
     },
     {
@@ -71,7 +90,7 @@ export const homeGenres: GenreProps = {
       },
       callToAction: {
         text: 'أسمع',
-        href: '/genres/sudan',
+        href: '/streams/sudan',
       },
     },
     {
@@ -83,7 +102,7 @@ export const homeGenres: GenreProps = {
       },
       callToAction: {
         text: 'قريباً',
-        href: '/genres/rap',
+        href: '/streams/rap',
       },
     },
     {
@@ -95,7 +114,7 @@ export const homeGenres: GenreProps = {
       },
       callToAction: {
         text: 'قريباً',
-        href: '/genres/bronze',
+        href: '/streams/bronze',
       },
     },
     {
@@ -107,7 +126,258 @@ export const homeGenres: GenreProps = {
       },
       callToAction: {
         text: 'قريباً',
-        href: '/genres/silver',
+        href: '/streams/silver',
+      },
+    },
+  ],
+};
+
+export const homeHero: HeroProps = {
+  title: <>مجموعة راديو ديشاك</>,
+  subtitle: (
+    <>
+      <span className="hidden md:inline">
+        <span className="font-semibold underline decoration-primary-600 decoration-wavy decoration-1 underline-offset-2"></span>{' '}
+        راديو المهاجر والمغترب السوداني
+      </span>{' '}
+    </>
+  ),
+  images: [
+    {
+      src: studioPic1,
+      alt: 'Studio 1',
+    },
+    {
+      src: studioPic2,
+      alt: 'Studio 2',
+    },
+    {
+      src: studioPic3,
+      alt: 'Studio 3',
+    },
+    {
+      src: studioPic4,
+      alt: 'Studio 4',
+    },
+    {
+      src: studioPic5,
+      alt: 'Studio 5',
+    },
+    {
+      src: studioPic6,
+      alt: 'Studio 6',
+    },
+    {
+      src: studioPic7,
+      alt: 'Studio 7',
+    },
+    {
+      src: studioPic8,
+      alt: 'Studio 8',
+    },
+    {
+      src: studioPic9,
+      alt: 'Studio 9',
+    },
+    {
+      src: studioPic10,
+      alt: 'Studio 10',
+    },
+    {
+      src: studioPic11,
+      alt: 'Studio 11',
+    },
+    {
+      src: studioPic12,
+      alt: 'Studio 12',
+    },
+    {
+      src: studioPic13,
+      alt: 'Studio 13',
+    },
+    {
+      src: studioPic14,
+      alt: 'Studio 14',
+    },
+    {
+      src: studioPic15,
+      alt: 'Studio 15',
+    },
+    {
+      src: studioPic16,
+      alt: 'Studio 16',
+    },
+    {
+      src: studioPic17,
+      alt: 'Studio 17',
+    },
+    {
+      src: studioPic18,
+      alt: 'Studio 18',
+    },
+    {
+      src: studioPic19,
+      alt: 'Studio 19',
+    },
+    {
+      src: studioPic20,
+      alt: 'Studio 20',
+    },
+    {
+      src: studioPic21,
+      alt: 'Studio 21',
+    },
+    {
+      src: studioPic22,
+      alt: 'Studio 22',
+    },
+    {
+      src: studioPic23,
+      alt: 'Studio 23',
+    },
+    {
+      src: studioPic24,
+      alt: 'Studio 24',
+    },
+    {
+      src: studioPic25,
+      alt: 'Studio 25',
+    },
+    {
+      src: studioPic26,
+      alt: 'Studio 26',
+    },
+    {
+      src: studioPic27,
+      alt: 'Studio 27',
+    },
+    {
+      src: studioPic28,
+      alt: 'Studio 28',
+    },
+    {
+      src: studioPic29,
+      alt: 'Studio 29',
+    },
+    {
+      src: studioPic30,
+      alt: 'Studio 30',
+    },
+    {
+      src: studioPic31,
+      alt: 'Studio 31',
+    },
+    {
+      src: studioPic32,
+      alt: 'Studio 32',
+    },
+    {
+      src: studioPic33,
+      alt: 'Studio 33',
+    },
+    {
+      src: studioPic34,
+      alt: 'Studio 34',
+    },
+  ],
+};
+
+export const homeAbout: HeroProps = {
+  id: 'about-on-home',
+  hasBackground: true,
+  tagline: 'راديو ديشاك',
+  subtitle:
+    'راديو ديشاك هو الراديو السوداني الأول على الانترنت، هو مشروع غير ربحي ومفتوح المصدر يعني بالمهاجر والمغترب السوداني في جميع أنحاء العالم. أغاني وموسيقى سودانية وإقليمية على مدار الساعة طوال أيام الأسبوع.',
+  title: 'الصورة ممكن تتسمع والصوت بيتشاف بالعيون',
+  image: {
+    src: heroImg,
+    alt: 'Studio 4',
+  },
+  callToAction: {
+    text: 'اكتشف المزيد',
+    href: '/about',
+  },
+};
+
+export const homeSocialMedia: SocialMediaProps = {
+  id: 'social-media-on-home',
+  header: {
+    title: 'تواصل معنا',
+    subtitle: 'تابعنا على وسائل التواصل الاجتماعي',
+    tagline: 'Social Media',
+  },
+  items: [
+    {
+      name: 'Facebook',
+      job: 'Like us on Facebook',
+      image: {
+        src: studioPic14,
+        alt: 'Facebook Logo',
+      },
+      callToAction: {
+        text: 'Like',
+        href: 'https://www.facebook.com/Deeshak_Radio',
+      },
+    },
+    {
+      name: 'Instagram',
+      job: 'Follow us on Instagram',
+      image: {
+        src: studioPic15,
+        alt: 'Instagram Logo',
+      },
+      callToAction: {
+        text: 'Follow',
+        href: 'https://www.instagram.com/Deeshak_Radio',
+      },
+    },
+    {
+      name: 'Twitter',
+      job: 'Follow us on Twitter',
+      image: {
+        src: studioPic16,
+        alt: 'Twitter Logo',
+      },
+      callToAction: {
+        text: 'Follow',
+        href: 'https://twitter.com/Deeshak_Radio',
+      },
+    },
+
+    {
+      name: 'YouTube',
+      job: 'Subscribe to our YouTube channel',
+      image: {
+        src: studioPic17,
+        alt: 'YouTube Logo',
+      },
+      callToAction: {
+        text: 'Subscribe',
+        href: 'https://www.youtube.com/Radio_Deeshak',
+      },
+    },
+    {
+      name: 'TikTok',
+      job: 'Follow us on TikTok',
+      image: {
+        src: studioPic18,
+        alt: 'TikTok Logo',
+      },
+      callToAction: {
+        text: 'Follow',
+        href: 'https://www.tiktok.com/@Deeshak_Radio',
+      },
+    },
+    {
+      name: 'Snapchat',
+      job: 'Follow us on Snapchat',
+      image: {
+        src: studioPic19,
+        alt: 'Snapchat Logo',
+      },
+      callToAction: {
+        text: 'Follow',
+        href: 'https://www.snapchat.com/add/Deeshak_Radio',
       },
     },
   ],

@@ -9,9 +9,9 @@ Radio Dishaak is the first Sudanese radio station on the internet, catering to S
 
 ## Features
 
-- Stream music from a wide range of genres.
+- Stream music from a wide range of streams.
 - Discover new artists and songs.
 
 ## Contact
 
-If you have any questions or suggestions, please feel free to contact us at <info@deeshak.com>.
+If you have any questions or suggestions, please feel free to contact us at <contact@deeshak.com>.

@@ -58,8 +58,8 @@ const ItemGrid = ({
                               src={image.src}
                               alt={image.alt}
                               quality={50}
-                              width={300}
-                              height={300}
+                              width={200}
+                              height={200}
                             />
                           </div>
                         )}
@@ -86,9 +86,7 @@ const ItemGrid = ({
                     <CTA
                       callToAction={callToAction}
                       linkClass={twMerge(
-                        `${
-                          title || description ? 'mt-3' : ''
-                        } text-primary font-bold text-zinc-900 hover:underline dark:text-gray-200 cursor-pointer`,
+                        `${title || description ? 'mt-3' : ''} text-orange-500 font-bold cursor-pointer`,
                         actionClass,
                       )}
                     />

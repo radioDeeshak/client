@@ -1,18 +1,27 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import { HeroProps } from '~/shared/types';
 import CTA from '../common/CTA';
 
-const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: HeroProps) => {
+const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, images }: HeroProps) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex === (images?.length ?? 0) - 1 ? 0 : prevIndex + 1));
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? (images?.length ?? 0) - 1 : prevIndex - 1));
+  };
+
   return (
     <section id="heroOne">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="py-12 md:py-20">
           <div className="mx-auto max-w-4xl pb-10 text-center md:pb-16">
-            {tagline && (
-              <p className="text-base font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-200">
-                {tagline}
-              </p>
-            )}
+            {tagline && <p className="text-base font-semibold uppercase tracking-wide">{tagline}</p>}
             {title && (
               <h1 className="text-primary-500 dark:text-primary-500 leading-tighter font-heading mb-6 text-4xl font-bold tracking-tighter md:text-5xl lg:text-8xl">
                 {title}
@@ -26,19 +35,33 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: 
               </div>
             </div>
           </div>
-          {image && (
+          {images && images.length > 1 && (
             <div className="relative m-auto max-w-5xl">
-              <Image
-                className="mx-auto h-auto w-full rounded-md bg-gray-400 dark:bg-zinc-700"
-                src={image.src}
-                alt={image.alt}
-                width={1024}
-                height={607}
-                sizes="(max-width: 64rem) 100vw, 1024px"
-                loading="eager"
-                placeholder="blur"
-                priority
-              />
+              <div className="relative">
+                <Image
+                  className="mx-auto h-auto w-full rounded-md bg-gray-400 dark:bg-zinc-700"
+                  src={images[currentImageIndex].src}
+                  alt={images[currentImageIndex].alt}
+                  width={1024}
+                  height={607}
+                  sizes="(max-width: 64rem) 100vw, 1024px"
+                  loading="eager"
+                  placeholder="blur"
+                  priority
+                />
+                <button
+                  className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-orange-500 bg-opacity-25 rounded-full p-2"
+                  onClick={prevImage}
+                >
+                  &lt;
+                </button>
+                <button
+                  className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-orange-500 bg-opacity-25 rounded-full p-2"
+                  onClick={nextImage}
+                >
+                  &gt;
+                </button>
+              </div>
             </div>
           )}
         </div>

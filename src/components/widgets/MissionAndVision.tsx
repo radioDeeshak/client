@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { GenreProps } from '~/shared/types';
+import { StreamProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 import Headline from '../common/Headline';
 
@@ -11,7 +11,7 @@ const MissionAndValues = ({
   id,
   hasBackground = false,
   isImageDisplayed = true,
-}: GenreProps) => (
+}: StreamProps) => (
   <WidgetWrapper
     id={id}
     hasBackground={hasBackground}

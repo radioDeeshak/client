@@ -16,22 +16,6 @@ type BackgroundProps = {
   hasBackground?: boolean;
 };
 
-type PlayProps = {
-  audioSrc: string;
-  audioType: string;
-  localStorageKey: string;
-};
-
-type ContentProps  = Widget & {
-  header?: Header;
-  content?: string;
-  items?: Array<Item>;
-  image?: Image;
-  isReversed?: boolean;
-  isAfterContent?: boolean;
-  audioSrc?: string;
-};
-
 type Header = {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
@@ -63,6 +47,53 @@ type GalleryProps = Widget & {
   image?: Image;
   isBeforeContent?: boolean;
   isAfterContent?: boolean;
+};
+
+
+type PlayProps = {
+  audioSrc: string;
+  audioType: string;
+  localStorageKey: string;
+  audioList: Array<string>;
+};
+
+type ContentProps  = Widget & {
+  header?: Header;
+  content?: string;
+  items?: Array<Item>;
+  image?: Image;
+  isReversed?: boolean;
+  isAfterContent?: boolean;
+  audioSrc?: string;
+  audioList?: Array<string>;
+};
+
+type SocialMediaProps = Widget & {
+  header?: Header;
+  items: Array<SocialMediaItemProps>;
+  isReversed?: boolean;
+  containerClass?: string;
+};
+
+type SocialMediaItemProps = {
+  name: string;
+  job?: string;
+  testimonial?: string;
+  image: Image;
+  isTestimonialUp?: boolean;
+  hasDividerLine?: boolean;
+  startSlice?: number;
+  endSlice?: number;
+  containerClass?: string;
+  panelClass?: string;
+  imageClass?: string;
+  dataClass?: string;
+  nameJobClass?: string;
+  nameClass?: string;
+  jobClass?: string;
+  testimonialClass?: string;
+  dataClass?: string;
+  callToAction?: CallToActionType;
 };
 
 type LinkOrButton = {
@@ -219,6 +250,7 @@ type HeroProps = Widget &  {
   callToAction?: CallToActionType;
   callToAction2?: CallToActionType;
   image?: Image;
+  images?: Array<Image>;
 };
 
 type CollapseProps = {
@@ -235,7 +267,7 @@ type CallToActionProps = Widget & {
   items?: Array<Item>;
 };
 
-type GenreProps = Widget & {
+type StreamProps = Widget & {
   header?: Header;
   items?: Array<Item>;
   columns?: 1 | 2 | 3;

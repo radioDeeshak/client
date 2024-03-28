@@ -17,7 +17,7 @@ export const headerData: HeaderProps = {
     },
     {
       label: 'التيارات',
-      href: '/genres',
+      href: '/streams',
     },
     {
       label: 'الرئيسية',
@@ -45,14 +45,14 @@ export const footerData: FooterProps = {
     },
     {
       title: 'Email',
-      texts: ['Info: info@deeshak.com'],
+      texts: ['Info: contact@deeshak.com'],
     },
   ],
   socials: [
-    { label: 'Twitter', icon: IconBrandTwitter, href: 'https://twitter.com/radiodeeshak' },
-    { label: 'Instagram', icon: IconBrandInstagram, href: 'https://instagram.com/radiodeeshak' },
-    { label: 'Facebook', icon: IconBrandFacebook, href: 'https://facebook.com/radiodeeshak' },
-    { label: 'Whatsapp', icon: IconBrandWhatsapp, href: 'https://wa.me/8103993576' },
+    { label: 'Twitter', icon: IconBrandTwitter, href: 'https://twitter.com/radio_deeshak' },
+    { label: 'Instagram', icon: IconBrandInstagram, href: 'https://instagram.com/radio_deeshak' },
+    { label: 'Facebook', icon: IconBrandFacebook, href: 'https://facebook.com/radio_deeshak' },
+    { label: 'Whatsapp', icon: IconBrandWhatsapp, href: 'https://wa.me/+18103993576' },
   ],
   footNote: (
     <div className="mr-4 text-sm dark:text-zinc-400">
