@@ -308,76 +308,51 @@ export const homeSocialMedia: SocialMediaProps = {
   },
   items: [
     {
-      name: 'Facebook',
-      job: 'Like us on Facebook',
-      image: {
-        src: studioPic14,
-        alt: 'Facebook Logo',
-      },
+      embedUrl:
+        'https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/photo?fbid=781327554001302&set=a.518735240260536&show_text=true',
       callToAction: {
-        text: 'Like',
-        href: 'https://www.facebook.com/Deeshak_Radio',
-      },
-    },
-    {
-      name: 'Instagram',
-      job: 'Follow us on Instagram',
-      image: {
-        src: studioPic15,
-        alt: 'Instagram Logo',
-      },
-      callToAction: {
-        text: 'Follow',
-        href: 'https://www.instagram.com/Deeshak_Radio',
-      },
-    },
-    {
-      name: 'Twitter',
-      job: 'Follow us on Twitter',
-      image: {
-        src: studioPic16,
-        alt: 'Twitter Logo',
-      },
-      callToAction: {
-        text: 'Follow',
-        href: 'https://twitter.com/Deeshak_Radio',
+        text: 'أعجبني',
+        href: 'https://www.facebook.com/deeshakradio',
       },
     },
 
     {
-      name: 'YouTube',
-      job: 'Subscribe to our YouTube channel',
-      image: {
-        src: studioPic17,
-        alt: 'YouTube Logo',
-      },
+      embedUrl: 'https://www.instagram.com/p/Csy1x6bubuH/embed/captioned/',
       callToAction: {
-        text: 'Subscribe',
-        href: 'https://www.youtube.com/Radio_Deeshak',
+        text: 'تابعنا',
+        href: 'https://www.instagram.com/radio_deeshak',
+      },
+    },
+
+    {
+      embedUrl:
+        'https://platform.twitter.com/embed/Tweet.html?dnt=true&embedId=twitter-widget-0&frame=false&hideCard=false&hideThread=false&id=1460313303985664000&lang=en&origin=https%3A%2F%2Ftwitter.com%2Fradio_deeshak%2Fstatus%2F1460313303985664000&theme=light&widgetsVersion=ed20a2b%3A1601588405575',
+      callToAction: {
+        text: 'تابعنا',
+        href: 'https://twitter.com/radio_deeshak',
+      },
+    },
+
+    {
+      embedUrl: 'https://www.tiktok.com/embed/v2/7035458843366657286',
+      callToAction: {
+        text: 'تابعنا',
+        href: 'https://www.tiktok.com/@radio_deeshak',
+      },
+    },
+
+    {
+      embedUrl: 'https://www.youtube.com/embed/POAWpq1qEeI',
+      callToAction: {
+        text: 'اشترك',
+        href: 'https://www.youtube.com/channel/radio_deeshak',
       },
     },
     {
-      name: 'TikTok',
-      job: 'Follow us on TikTok',
-      image: {
-        src: studioPic18,
-        alt: 'TikTok Logo',
-      },
+      embedUrl: 'https://soundcloud.com/radio_deeshak',
       callToAction: {
-        text: 'Follow',
-        href: 'https://www.tiktok.com/@Deeshak_Radio',
-      },
-    },
-    {
-      name: 'Snapchat',
-      job: 'Follow us on Snapchat',
-      image: {
-        src: studioPic19,
-        alt: 'Snapchat Logo',
-      },
-      callToAction: {
-        text: 'Follow',
-        href: 'https://www.snapchat.com/add/Deeshak_Radio',
+        text: 'استمع',
+        href: 'https://soundcloud.com/radio_deeshak',
       },
     },
   ],

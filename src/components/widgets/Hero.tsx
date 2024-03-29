@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { IconChevronsLeft, IconChevronsRight } from '@tabler/icons-react';
 import { HeroProps } from '~/shared/types';
 import CTA from '../common/CTA';
 
@@ -38,29 +40,37 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, images }:
           {images && images.length > 1 && (
             <div className="relative m-auto max-w-5xl">
               <div className="relative">
-                <Image
-                  className="mx-auto h-auto w-full rounded-md bg-gray-400 dark:bg-zinc-700"
-                  src={images[currentImageIndex].src}
-                  alt={images[currentImageIndex].alt}
-                  width={1024}
-                  height={607}
-                  sizes="(max-width: 64rem) 100vw, 1024px"
-                  loading="eager"
-                  placeholder="blur"
-                  priority
-                />
-                <button
-                  className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-orange-500 bg-opacity-25 rounded-full p-2"
+                <motion.button
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-orange-500 rounded-full p-2"
                   onClick={prevImage}
                 >
-                  &lt;
-                </button>
-                <button
-                  className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-orange-500 bg-opacity-25 rounded-full p-2"
+                  <IconChevronsLeft />
+                </motion.button>
+                <motion.button
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-orange-500 rounded-full p-2"
                   onClick={nextImage}
                 >
-                  &gt;
-                </button>
+                  <IconChevronsRight />
+                </motion.button>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                  <Image
+                    className="mx-auto h-auto w-full rounded-md bg-gray-400 dark:bg-zinc-700"
+                    src={images[currentImageIndex].src}
+                    alt={images[currentImageIndex].alt}
+                    width={1024}
+                    height={607}
+                    sizes="(max-width: 64rem) 100vw, 1024px"
+                    loading="eager"
+                    placeholder="blur"
+                    priority
+                  />
+                </motion.div>
               </div>
             </div>
           )}

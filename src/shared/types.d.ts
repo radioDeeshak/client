@@ -37,6 +37,7 @@ type CallToActionType = {
   href: string;
   icon?: Icon;
   targetBlank?: boolean;
+
 };
 
 type GalleryProps = Widget & {
@@ -76,24 +77,10 @@ type SocialMediaProps = Widget & {
 };
 
 type SocialMediaItemProps = {
-  name: string;
-  job?: string;
-  testimonial?: string;
-  image: Image;
-  isTestimonialUp?: boolean;
-  hasDividerLine?: boolean;
-  startSlice?: number;
-  endSlice?: number;
+  embedUrl: string;
+  callToAction?: CallToActionType;
   containerClass?: string;
   panelClass?: string;
-  imageClass?: string;
-  dataClass?: string;
-  nameJobClass?: string;
-  nameClass?: string;
-  jobClass?: string;
-  testimonialClass?: string;
-  dataClass?: string;
-  callToAction?: CallToActionType;
 };
 
 type LinkOrButton = {
@@ -101,6 +88,7 @@ type LinkOrButton = {
   containerClass?: string;
   linkClass?: string;
   iconClass?: string;
+  targetBlank?: boolean;
 };
 
 type Button = {
