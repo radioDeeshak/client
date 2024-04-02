@@ -92,7 +92,7 @@ export const sudanContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
-  audioSrc: 'https://secure1.reliastream.com/deeshak/;stream.nsv',
+  audioSrc: 'https://s7.reliastream.com/proxy/osmmal01?mp=/stream',
 };
 
 // bronzeContent

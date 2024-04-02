@@ -16,7 +16,7 @@ export const headerData: HeaderProps = {
       href: '/gallery',
     },
     {
-      label: 'التيارات',
+      label: 'الإذاعات',
       href: '/streams',
     },
     {

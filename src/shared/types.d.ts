@@ -44,18 +44,25 @@ type GalleryProps = Widget & {
   header?: Header;
   items?: Array<Item>;
   columns?: 1 | 2 | 3;
-  isImageDisplayed?: boolean;
+  isImageDisplayed?: boolean;W
   image?: Image;
   isBeforeContent?: boolean;
   isAfterContent?: boolean;
 };
 
+type SongInfoProps = {
+  audioSrc: string;
+  songTitle: string;
+  songHistory: Array<string>;
+};
 
-type PlayProps = {
+type PlayerProps = {
   audioSrc: string;
   audioType: string;
   localStorageKey: string;
   audioList: Array<string>;
+  songTitle?: string;
+  songHistory?: Array<string>;
 };
 
 type ContentProps  = Widget & {

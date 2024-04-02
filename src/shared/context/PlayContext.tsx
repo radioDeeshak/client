@@ -17,7 +17,7 @@ export const PlayerProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [isPlaying, setIsPlaying] = useState(false);
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
   const [currentAudioSrc, setCurrentAudioSrc] = useState<string | null>(null);
-  const [volume, setVolume] = useState(0.5); // Initial volume level
+  const [volume, setVolume] = useState(0.5);
 
   useEffect(() => {
     const storedState = localStorage.getItem('isPlaying');

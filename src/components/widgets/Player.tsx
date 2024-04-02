@@ -7,13 +7,58 @@ import {
   IconPlayerSkipForward,
   IconPlayerSkipBack,
 } from '@tabler/icons-react';
-import { PlayProps } from '~/shared/types';
+import { PlayerProps } from '~/shared/types';
 import { usePlayer } from '~/shared/context/PlayContext';
+import { Parser } from 'icecast-parser';
 
-const Play = ({ audioSrc, localStorageKey, audioList }: PlayProps) => {
+const Play = ({ audioSrc, localStorageKey, audioList }: PlayerProps) => {
   const { isPlaying, togglePlay, audio, setAudio, setCurrentAudioSrc, currentAudioSrc, volume, setVolume } =
     usePlayer();
   const [currentAudioIndex, setCurrentAudioIndex] = useState(0);
+  const [songTitle, setSongTitle] = useState('');
+
+  const fetchRadioData = async (audioSrc: string) => {
+    try {
+      const radioStation = new Parser({ url: audioSrc });
+      radioStation.on('metadata', async (metadata) => {
+        try {
+          const streamTitle = metadata.get('StreamTitle');
+          if (streamTitle) {
+            setSongTitle(streamTitle);
+            console.log('Stream title:', streamTitle);
+            console.log('Song title:', songTitle);
+          }
+        } catch (error) {
+          console.error('Error setting song title:', error);
+        }
+      });
+
+      radioStation.on('end', () => {
+        console.log('Radio stream ended');
+      });
+
+      radioStation.on('error', (err) => {
+        console.error('Error fetching radio data:', err);
+      });
+    } catch (error) {
+      console.error('Error initializing radio station:', error);
+    }
+  };
+  fetchRadioData(audioSrc);
+
+  useEffect(() => {
+    if (audio) {
+      audio.volume = volume;
+    }
+  }, [audio, volume]);
+
+  useEffect(() => {
+    if (audio) {
+      audio.addEventListener('play', () => {
+        audio.volume = volume;
+      });
+    }
+  }, [audio, volume]);
 
   useEffect(() => {
     if (!audio || audioSrc !== currentAudioSrc) {
@@ -91,6 +136,12 @@ const Play = ({ audioSrc, localStorageKey, audioList }: PlayProps) => {
 
   return (
     <div className="mx-auto max-w-3xl">
+      {songTitle && (
+        <div className="mt-4 text-center text-xl font-bold">
+          {songTitle}
+          <br />
+        </div>
+      )}
       {audio && (
         <div className="flex items-center justify-center">
           <button onClick={playPrevious} className="btn btn-primary rounded-full p-3 mr-4">

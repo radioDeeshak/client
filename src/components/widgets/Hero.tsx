@@ -44,7 +44,7 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, images }:
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-orange-500 rounded-full p-2"
+                  className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-orange-500 text-white rounded-full p-2"
                   onClick={prevImage}
                 >
                   <IconChevronsLeft />
@@ -53,7 +53,7 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, images }:
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-orange-500 rounded-full p-2"
+                  className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-orange-500 text-white rounded-full p-2"
                   onClick={nextImage}
                 >
                   <IconChevronsRight />
