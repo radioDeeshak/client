@@ -44,7 +44,7 @@ type GalleryProps = Widget & {
   header?: Header;
   items?: Array<Item>;
   columns?: 1 | 2 | 3;
-  isImageDisplayed?: boolean;W
+  isImageDisplayed?: boolean;
   image?: Image;
   isBeforeContent?: boolean;
   isAfterContent?: boolean;

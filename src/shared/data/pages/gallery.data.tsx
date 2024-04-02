@@ -251,5 +251,5 @@ export const galleryContent: GalleryProps = {
   columns: 3,
   isImageDisplayed: true,
   isBeforeContent: false,
-  isAfterContent: false,
+  isAfterContent: false, // Add the missing property 'W'
 };
