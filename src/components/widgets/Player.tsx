@@ -17,34 +17,35 @@ const Play = ({ audioSrc, localStorageKey, audioList }: PlayerProps) => {
   const [currentAudioIndex, setCurrentAudioIndex] = useState(0);
   const [songTitle, setSongTitle] = useState('');
 
-  const fetchRadioData = async (audioSrc: string) => {
-    try {
-      const radioStation = new Parser({ url: audioSrc });
-      radioStation.on('metadata', async (metadata) => {
-        try {
-          const streamTitle = metadata.get('StreamTitle');
-          if (streamTitle) {
-            setSongTitle(streamTitle);
-            console.log('Stream title:', streamTitle);
-            console.log('Song title:', songTitle);
-          }
-        } catch (error) {
-          console.error('Error setting song title:', error);
-        }
-      });
+  // const fetchRadioData = async (audioSrc: string) => {
+  //   try {
+  //     const radioStation = new Parser({ url: audioSrc });
+  //     radioStation.on('metadata', async (metadata) => {
+  //       try {
+  //         const streamTitle = metadata.get('StreamTitle');
+  //         if (streamTitle) {
+  //           const stringifiedStreamTitle = JSON.stringify(streamTitle);
+  //           setSongTitle(stringifiedStreamTitle);
+  //           console.log('Stream title:', stringifiedStreamTitle);
+  //           console.log('Song title:', songTitle);
+  //         }
+  //       } catch (error) {
+  //         console.error('Error setting song title:', error);
+  //       }
+  //     });
 
-      radioStation.on('end', () => {
-        console.log('Radio stream ended');
-      });
+  //     radioStation.on('end', () => {
+  //       console.log('Radio stream ended');
+  //     });
 
-      radioStation.on('error', (err) => {
-        console.error('Error fetching radio data:', err);
-      });
-    } catch (error) {
-      console.error('Error initializing radio station:', error);
-    }
-  };
-  fetchRadioData(audioSrc);
+  //     radioStation.on('error', (err) => {
+  //       console.error('Error fetching radio data:', err);
+  //     });
+  //   } catch (error) {
+  //     console.error('Error initializing radio station:', error);
+  //   }
+  // };
+  // fetchRadioData(audioSrc);
 
   useEffect(() => {
     if (audio) {
@@ -144,7 +145,7 @@ const Play = ({ audioSrc, localStorageKey, audioList }: PlayerProps) => {
       )}
       {audio && (
         <div className="flex items-center justify-center">
-          <button onClick={playPrevious} className="btn btn-primary rounded-full p-3 mr-4">
+          {/* <button onClick={playPrevious} className="btn btn-primary rounded-full p-3 mr-4">
             <IconPlayerSkipBack />
           </button>
           <button
@@ -155,9 +156,18 @@ const Play = ({ audioSrc, localStorageKey, audioList }: PlayerProps) => {
           </button>
           <button onClick={playNext} className="btn btn-primary rounded-full p-3 ml-4">
             <IconPlayerSkipForward />
-          </button>
+          </button> */}
         </div>
       )}
+      <iframe
+        src="https://papaya-biscochitos-d81c54.netlify.app/"
+        title="Radio Player"
+        style={{
+          width: '500px',
+          borderRadius: '8px',
+          backgroundColor: 'transparent',
+        }}
+      />
     </div>
   );
 };
