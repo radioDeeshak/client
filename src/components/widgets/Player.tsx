@@ -160,10 +160,11 @@ const Play = ({ audioSrc, localStorageKey, audioList }: PlayerProps) => {
         </div>
       )}
       <iframe
-        src="https://papaya-biscochitos-d81c54.netlify.app/"
+        src={audioSrc}
         title="Radio Player"
         style={{
-          width: '500px',
+          width: '100%',
+          height: '320px',
           borderRadius: '8px',
           backgroundColor: 'transparent',
         }}

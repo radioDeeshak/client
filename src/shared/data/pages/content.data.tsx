@@ -21,7 +21,7 @@ export const goldContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
-  // audioSrc: 'https://secure1.reliastream.com/deeshak/;stream.nsv',
+  // audioSrc: 'https://papaya-biscochitos-d81c54.netlify.app/',
 };
 
 // haqibaContent
@@ -39,7 +39,7 @@ export const haqibaContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
-  audioSrc: 'https://s9.reliastream.com/proxy/osman?mp=/stream',
+  audioSrc: 'https://papaya-biscochitos-d81c54.netlify.app/',
 };
 
 // rapContent
@@ -57,7 +57,7 @@ export const rapContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
-  // audioSrc: 'https://secure1.reliastream.com/deeshak/;stream.nsv',
+  // audioSrc: 'https://papaya-biscochitos-d81c54.netlify.app/',
 };
 
 export const silverContent: ContentProps = {
@@ -74,7 +74,7 @@ export const silverContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
-  // audioSrc: 'https://secure1.reliastream.com/deeshak/;stream.nsv',
+  // audioSrc: 'https://papaya-biscochitos-d81c54.netlify.app/',
 };
 
 // sudanContent
@@ -92,7 +92,7 @@ export const sudanContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
-  audioSrc: 'https://s7.reliastream.com/proxy/osmmal01?mp=/stream',
+  audioSrc: 'https://papaya-biscochitos-d81c54.netlify.app/',
 };
 
 // bronzeContent
@@ -111,5 +111,5 @@ export const bronzeContent: ContentProps = {
   isReversed: false,
   isAfterContent: false,
   audioSrc: '',
-  // audioSrc: 'https://secure1.reliastream.com/deeshak/;stream.nsv',
+  // audioSrc: 'https://papaya-biscochitos-d81c54.netlify.app/',
 };
