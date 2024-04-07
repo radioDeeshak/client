@@ -6,6 +6,24 @@ import silverPoster from '~/assets/images/posters/poster2.jpg';
 import sudanPoster from '~/assets/images/posters/poster.jpg';
 import { ContentProps } from '~/shared/types';
 
+// bronzeContent
+export const bronzeContent: ContentProps = {
+  id: 'bronzeContent',
+  hasBackground: false,
+  header: {
+    title: 'ديشاك برونزي',
+    subtitle: 'أغاني خالدة من التسعينيات',
+    tagline: 'Deeshak Bronze Content',
+  },
+  image: {
+    src: bronzePoster,
+    alt: 'Deeshak Bronze Image',
+  },
+  isReversed: false,
+  isAfterContent: false,
+  // audioSrc: 'https://deeshak-bronze.netlify.app',
+};
+
 // goldContent
 export const goldContent: ContentProps = {
   id: 'goldContent',
@@ -21,7 +39,7 @@ export const goldContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
-  // audioSrc: 'https://papaya-biscochitos-d81c54.netlify.app/',
+  // audioSrc: 'https://deeshak-gold.netlify.app',
 };
 
 // haqibaContent
@@ -39,7 +57,7 @@ export const haqibaContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
-  audioSrc: 'https://papaya-biscochitos-d81c54.netlify.app/',
+  audioSrc: 'https://deeshak-haqiba.netlify.app',
 };
 
 // rapContent
@@ -57,7 +75,7 @@ export const rapContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
-  // audioSrc: 'https://papaya-biscochitos-d81c54.netlify.app/',
+  // audioSrc: 'https://deeshak-rap.netlify.app',
 };
 
 export const silverContent: ContentProps = {
@@ -74,7 +92,7 @@ export const silverContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
-  // audioSrc: 'https://papaya-biscochitos-d81c54.netlify.app/',
+  // audioSrc: 'https://deeshak-silver.netlify.app',
 };
 
 // sudanContent
@@ -92,24 +110,5 @@ export const sudanContent: ContentProps = {
   },
   isReversed: false,
   isAfterContent: false,
-  audioSrc: 'https://papaya-biscochitos-d81c54.netlify.app/',
-};
-
-// bronzeContent
-export const bronzeContent: ContentProps = {
-  id: 'bronzeContent',
-  hasBackground: false,
-  header: {
-    title: 'ديشاك برونزي',
-    subtitle: 'أغاني خالدة من التسعينيات',
-    tagline: 'Deeshak Bronze Content',
-  },
-  image: {
-    src: bronzePoster,
-    alt: 'Deeshak Bronze Image',
-  },
-  isReversed: false,
-  isAfterContent: false,
-  audioSrc: '',
-  // audioSrc: 'https://papaya-biscochitos-d81c54.netlify.app/',
+  audioSrc: 'https://deeshak-sudan.netlify.app',
 };
