@@ -9,7 +9,7 @@ import {
 } from '@tabler/icons-react';
 import { PlayerProps } from '~/shared/types';
 import { usePlayer } from '~/shared/context/PlayContext';
-import { Parser } from 'icecast-parser';
+// import { Parser } from 'icecast-parser';
 
 const Play = ({ audioSrc, localStorageKey, audioList }: PlayerProps) => {
   const { isPlaying, togglePlay, audio, setAudio, setCurrentAudioSrc, currentAudioSrc, volume, setVolume } =
