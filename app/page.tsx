@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      <Streams {...homeStreams} />
       <Hero {...homeHero} />
       <About {...homeAbout} />
-      <Streams {...homeStreams} />
       <SocialMedia {...homeSocialMedia} />
     </>
   );
